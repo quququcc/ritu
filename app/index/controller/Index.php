@@ -21,20 +21,20 @@ class Index extends BaseController
 
     public function css($css)
     {
-        return redirect("/chubang-tech/css/" . $css);
+        return redirect("/static/index/css/" . $css);
     }
 
     public function js($dir = '', $js = '')
     {
         if (empty($dir)) {
-            return redirect("/chubang-tech/js/" . $js);
+            return redirect("/static/index/js/" . $js);
         } else {
-            return redirect("/chubang-tech/js/" . $dir . '/' . $js);
+            return redirect("/static/index/js/" . $dir . '/' . $js);
         }
     }
 
     public function imgs($imgs)
     {
-        return redirect("/chubang-tech/imgs/" . $imgs);
+        return redirect("/static/index/imgs/" . $imgs);
     }
 }
