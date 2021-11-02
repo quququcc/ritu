@@ -1,0 +1,98 @@
+/* 广告图 */
+
+.banner {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* 内容区 */
+
+.xg_content {
+  background: #F6F6F6;
+  
+}
+
+/* 面包屑 */
+
+.section_crumbs {
+  position: relative;
+  top: -50px;
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.crumbs {
+  text-align: right;
+}
+
+.section_crumbs a, .section_crumbs span {
+  color: #FFF;
+  font-size: 14px;
+}
+
+.crumbs_ico {
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+.crumbs_ico img {
+  width: 24px;
+  height: auto;
+}
+
+.section_crumbs a:hover {
+  transition: all 0.4s ease;
+  color: #D70012;
+}
+
+/* 面包屑end */
+/* 内容 */
+.xg_content .section_contact {
+  padding: 86px 0 80px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.content_text {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #FFF;
+  border: 1px solid #E2E2E2;
+  border-right: none;
+  border-bottom: none;
+}
+
+.content_text>div {
+  padding: 15px 15px;
+  width: 33.33%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #E2E2E2;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.content_text>div p:nth-of-type(1) {
+  margin-top: 15px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.content_text>div p:nth-of-type(2) {
+  margin-top: 15px;
+  color: #A5A5A5;
+  font-size: 18px;
+}

@@ -1,0 +1,110 @@
+/* 广告图 */
+
+.banner {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+/* 内容区 */
+
+.xg_content {
+  background: #F6F6F6;
+}
+
+/* 面包屑 */
+
+.section_crumbs {
+  position: relative;
+  top: -50px;
+  width: 1200px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.crumbs {
+  text-align: right;
+}
+
+.section_crumbs a, .section_crumbs span {
+  color: #FFF;
+  font-size: 14px;
+}
+
+.crumbs_ico {
+  position: relative;
+  top: 5px;
+  padding-right: 5px;
+}
+
+.crumbs_ico img {
+  width: 24px;
+  height: auto;
+}
+
+.section_crumbs a:hover {
+  transition: all 0.4s ease;
+  color: #D70012;
+}
+
+/* 面包屑end */
+
+/* 内容 */
+
+.details_box {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.details_title {
+  color: #D70012;
+  text-align: center;
+  font-size: 16px;
+}
+
+.details_other {
+  padding: 32px 0;
+  font-size: 16px;
+  text-align: center;
+  color: #7B7B7B;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.details_con {
+  margin-top: 65px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #DBDBDB;
+}
+
+.details_con p {
+  color: #7B7B7B;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+/* 上下篇 */
+
+.xg_prevnext {
+  margin-top: 15px;
+}
+
+.xg_prevnext>span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.xg_prevnext a {
+  color: #7B7B7B;
+  font-size: 16px;
+}
+
+.xg_prevnext a:hover {
+  transition: all 0.4s ease;
+  color: #D70012;
+}
