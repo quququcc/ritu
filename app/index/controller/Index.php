@@ -35,6 +35,7 @@ class Index extends BaseController
 
     public function imgs($imgs)
     {
+        echo $imgs;
         return redirect("/static/index/imgs/" . $imgs);
     }
 }
