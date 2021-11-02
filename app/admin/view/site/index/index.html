@@ -1,0 +1,45 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">首页配置</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form id="app-form" class="layui-form layuimini-form">
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">解决方案背景图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background_1" class="layui-input layui-col-xs6" lay-verify="required" placeholder="请上传背景图片" value="{$data.background_1|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background_1" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background_1" data-upload-select="background_1" data-upload-number="one"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">项目案例背景图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background_2" class="layui-input layui-col-xs6" lay-verify="required" placeholder="请上传背景图片" value="{$data.background_2|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background_2" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background_2" data-upload-select="background_2" data-upload-number="one"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.index/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
