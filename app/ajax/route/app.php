@@ -21,23 +21,28 @@ Route::get('config', 'Config/index');
 //首页数据
 Route::get('index', 'Index/index');
 
-//关于我们
-Route::get('aboutUs', 'AboutUs/index');
+//专家团队
+Route::get('team', 'Team/index');
 
-//产品列表
-Route::get('productsList/[:cate_id]/:page', 'Products/list');
-Route::get('productsDetail/:id', 'Products/detail');
+//企业培训
+Route::get('trainCate', 'Train/cate');
+Route::get('train/[:cate_id]/[:page]$', 'Train/list');
+Route::get('trainDetail/:id', 'Train/detail');
 
-//产品分类信息
-Route::get('productsCate', 'Products/cate');
+//人才训练
+Route::get('drill/[:page]$', 'Drill/list');
+Route::get('drillDetail/:id', 'Drill/detail');
 
-//解决方案列表
-Route::get('solutionList/:page', 'Solution/list');
-Route::get('solutionDetail/:id', 'Solution/detail');
+//服务案例
+Route::get('case/[:page]$', 'Cases/list');
 
-//项目案例数据列表
-Route::get('projectList/:page', 'Project/list');
-Route::get('projectDetail/:id', 'Project/detail');
+//新闻中心
+Route::get('news/[:page]$', 'News/list');
+Route::get('newsDetail/:id', 'News/detail');
+
+//管理智库
+Route::get('think/[:page]$', 'Think/list');
+Route::get('thinkDetail/:id', 'Think/detail');
 
 //联系我们
 Route::get('contact', 'Contact/index');

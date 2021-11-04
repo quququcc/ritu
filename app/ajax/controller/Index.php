@@ -2,39 +2,38 @@
 
 namespace app\ajax\controller;
 
-use app\ajax\model\SiteIndex;
-use app\ajax\model\SiteAdvantage;
-use app\ajax\model\SiteSolution;
-use app\ajax\model\SiteProducts;
-use app\ajax\model\SiteProject;
-use app\ajax\model\SitePartner;
+use app\admin\model\SiteCases;
+use app\admin\model\SiteDrill;
+use app\admin\model\SiteNews;
+use app\admin\model\SiteTeam;
 
 class Index
 {
     /**
      * @note: 首页所有数据接口
      * @return string
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\DbException
+     * @throws \think\db\exception\ModelNotFoundException
      */
     public function index()
     {
         $data = array();
-        //背景图
-        $data['background'] = (new SiteIndex)->field(['background_1', 'background_2'])->where('id', 1)->find()->toArray();
+        //咨询产品与落地方案
 
-        //我们的优势
-        $data['advantage'] = (new SiteAdvantage)->order('sort')->select()->toArray() ?? [];
+        //项目服务优势
 
-        //解决方案
-        $data['solution'] = (new SiteSolution)->order('index_order')->select()->toArray() ?? [];
+        //课程落地风采 使用人才训练内容
+        $data['style'] = (new SiteDrill())->field(['id', 'title', 'image'])->limit(4)->order('created')->select()->toArray() ?? [];
 
-        //产品中心
-        $data['products'] = (new SiteProducts)->field(['id','title','image'])->limit(6)->order('id')->select();
+        //专家团队介绍
+        $data['team'] = (new SiteTeam())->order('sort')->select()->toArray();
 
-        //项目案例
-        $data['project'] = (new SiteProject)->field(['id','title','image'])->limit(10)->order('id')->select();
+        //服务案例展示
+        $data['case'] = (new SiteCases())->field(['name', 'image'])->limit(18)->order('sort','asc')->select()->toArray() ?? [];
 
-        //合作伙伴
-        $data['partner'] = (new SitePartner)->select()->toArray() ?? [];
+        //新闻资讯
+        $data['news'] = (new SiteNews())->field(['id', 'title', 'descript', 'image', 'created'])->limit(5)->order('created')->select()->toArray() ?? [];
 
         return json_encode($data);
     }

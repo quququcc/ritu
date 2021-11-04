@@ -4,25 +4,25 @@
         <div class="layui-form-item">
             <label class="layui-form-label">标题</label>
             <div class="layui-input-block">
-                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$row.title|default=''}">
+                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">副标题</label>
             <div class="layui-input-block">
-                <input type="text" name="title_s" class="layui-input" lay-verify="required" placeholder="请输入副标题" value="{$row.title_s|default=''}">
+                <input type="text" name="title_s" class="layui-input" lay-verify="required" placeholder="请输入副标题" value="">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">跳转链接</label>
             <div class="layui-input-block">
-                <input type="text" name="to_url" class="layui-input"  placeholder="请输入跳转链接" value="{$row.to_url|default=''}">
+                <input type="text" name="to_url" class="layui-input"  placeholder="请输入跳转链接" value="">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label required">Banner图</label>
             <div class="layui-input-block layuimini-upload">
-                <input name="background" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$row.background|default=''}">
+                <input name="background" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="">
                 <div class="layuimini-upload-btn">
                     <span><a class="layui-btn" data-upload="background" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
                     <span><a class="layui-btn layui-btn-normal" id="select_background" data-upload-select="background" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
@@ -32,7 +32,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label required">移动端</label>
             <div class="layui-input-block layuimini-upload">
-                <input name="background_m" class="layui-input layui-col-xs6"   placeholder="请上传移动端Banner图" value="{$row.background_m|default=''}">
+                <input name="background_m" class="layui-input layui-col-xs6"   placeholder="请上传移动端Banner图" value="">
                 <div class="layuimini-upload-btn">
                     <span><a class="layui-btn" data-upload="background_m" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
                     <span><a class="layui-btn layui-btn-normal" id="select_background_m" data-upload-select="background_m" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
@@ -43,7 +43,7 @@
             <label class="layui-form-label">是否显示</label>
             <div class="layui-input-block">
                 {foreach $getIsShowList as $k=>$v}
-                <input type="radio" name="is_show" value="{$k}" title="{$v}" {in name="k" value="$row.is_show"}checked=""{/in}>
+                <input type="radio" name="is_show" value="{$k}" title="{$v}" {in name="k" value="1"}checked=""{/in}>
                 {/foreach}
             </div>
         </div>
@@ -51,7 +51,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">排序</label>
             <div class="layui-input-block">
-                <input type="text" name="sort" class="layui-input"  placeholder="请输入排序" value="{$row.sort|default=''}">
+                <input type="text" name="sort" class="layui-input"  placeholder="请输入排序" value="0">
             </div>
         </div>
         <div class="hr-line"></div>

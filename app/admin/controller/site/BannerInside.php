@@ -8,9 +8,9 @@ use EasyAdmin\annotation\NodeAnotation;
 use think\App;
 
 /**
- * @ControllerAnnotation(title="site_banner")
+ * @ControllerAnnotation(title="site_banner_inside")
  */
-class Banner extends AdminController
+class BannerInside extends AdminController
 {
 
     use \app\admin\traits\Curd;
@@ -19,10 +19,8 @@ class Banner extends AdminController
     {
         parent::__construct($app);
 
-        $this->model = new \app\admin\model\SiteBanner();
+        $this->model = new \app\admin\model\SiteBannerInside();
         
-        $this->assign('getIsShowList', $this->model->getIsShowList());
-
     }
 
     

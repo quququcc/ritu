@@ -18,9 +18,9 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">案例详情</label>
+            <label class="layui-form-label">排序</label>
             <div class="layui-input-block">
-                <textarea name="content" rows="20" class="layui-textarea editor" 案例详情 placeholder="请输入案例详情">{$row.content|raw|default=''}</textarea>
+                <input type="text" name="sort" class="layui-input"  placeholder="请输入排序" value="{$row.sort|default=0}">
             </div>
         </div>
         <div class="hr-line"></div>

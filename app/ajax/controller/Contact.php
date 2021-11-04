@@ -19,7 +19,7 @@ class Contact
     }
 
     public function index(){
-        $data = $this->model->field(['address','email','phone1','phone2','phone1','address_image'])
+        $data = $this->model->field(['call','email','qq','contacts','phone','address'])
                 ->where('id',1)->find()->toArray() ?? '';
         return json_encode($data);
     }
