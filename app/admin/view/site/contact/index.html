@@ -10,10 +10,10 @@
                     <form id="app-form" class="layui-form layuimini-form">
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">公司地址</label>
+                            <label class="layui-form-label">全国服务电话</label>
                             <div class="layui-input-block">
-                                <input type="text" name="address" class="layui-input" lay-verify="required" placeholder="请输入公司地址" value="{$data.address|default=''}">
-                                <tip>请填写公司地址</tip>
+                                <input type="text" name="call" class="layui-input" lay-verify="required" placeholder="请输入公司地址" value="{$data.call|default=''}">
+                                <tip>请填写服务电话</tip>
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -24,24 +24,31 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label">联系电话1</label>
+                            <label class="layui-form-label">QQ号码</label>
                             <div class="layui-input-block">
-                                <input type="text" name="phone1" class="layui-input" lay-verify="required" placeholder="请输入联系电话" value="{$data.phone1|default=''}">
+                                <input type="text" name="qq" class="layui-input" lay-verify="required" placeholder="请输入QQ号码" value="{$data.qq|default=''}">
+                                <tip>请填写QQ号码</tip>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系人</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="contacts" class="layui-input" lay-verify="required" placeholder="请输入联系人" value="{$data.contacts|default=''}">
+                                <tip>请填写联系人</tip>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系电话</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="phone" class="layui-input" lay-verify="required" placeholder="请输入联系电话" value="{$data.phone|default=''}">
                                 <tip>请填写联系电话</tip>
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label">联系电话2</label>
+                            <label class="layui-form-label">公司地址</label>
                             <div class="layui-input-block">
-                                <input type="text" name="phone2" class="layui-input" placeholder="请输入联系电话" value="{$data.phone2|default=''}">
-                                <tip>请填写联系电话</tip>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">联系电话3</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="phone3" class="layui-input" placeholder="请输入联系电话" value="{$data.phone3|default=''}">
-                                <tip>请填写联系电话</tip>
+                                <input type="text" name="address" class="layui-input" lay-verify="required" placeholder="请输入公司地址" value="{$data.address|default=''}">
+                                <tip>请填写公司地址</tip>
                             </div>
                         </div>
                         <div class="hr-line"></div>

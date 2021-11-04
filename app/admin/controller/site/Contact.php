@@ -41,12 +41,12 @@ class Contact extends AdminController
         $post = $this->request->post();
         try {
             $update = [
-                'address'=>$post['address'],
+                'call'=>$post['call'],
                 'email'=>$post['email'],
-                'phone1'=>$post['phone1'],
-                'phone2'=>$post['phone2'],
-                'phone3'=>$post['phone3'],
-                'address_image'=>$post['address_image'],
+                'qq'=>$post['qq'],
+                'contacts'=>$post['contacts'],
+                'phone'=>$post['phone'],
+                'address'=>$post['address'],
             ];
             $this->model->where('id',1)->update($update);
         } catch (\Exception $e) {
