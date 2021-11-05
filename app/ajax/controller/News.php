@@ -34,8 +34,8 @@ class News
         $data = (new SiteNews())->where('id',$id)->find()->toArray();
         $data['created'] = date('Y-m-d', strtotime($data['created']));
         //获取上一篇下一篇
-        $prev = (new SiteNews())->field(['id','title'])->where('id','<',$id)->limit(1)->find()->toArray() ?? [];
-        $next = (new SiteNews())->field(['id','title'])->where('id','>',$id)->limit(1)->find()->toArray() ?? [];
+        $prev = (new SiteNews())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? [];
+        $next = (new SiteNews())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? [];
 
         $return = [
             'detail'=>$data,

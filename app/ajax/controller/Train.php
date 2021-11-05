@@ -42,8 +42,8 @@ class Train
     {
         $data = (new SiteTrain())->where('id',$id)->find()->toArray();
         //获取上一篇下一篇
-        $prev = (new SiteTrain())->field(['id','title'])->where('id','<',$id)->limit(1)->find()->toArray() ?? [];
-        $next = (new SiteTrain())->field(['id','title'])->where('id','>',$id)->limit(1)->find()->toArray() ?? [];
+        $prev = (new SiteTrain())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? [];
+        $next = (new SiteTrain())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? [];
 
         $return = [
             'detail'=>$data,
