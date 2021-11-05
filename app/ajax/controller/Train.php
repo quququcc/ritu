@@ -25,10 +25,17 @@ class Train
         $limit = 9;
         if ($cate_id != 0) {
             $data = (new SiteTrain())->field(['id', 'title', 'descript', 'image'])->where('cate_id', $cate_id)->limit(($page - 1) * $limit, $limit)->order('sort')->order('id')->select()->toArray() ?? [];
+            $num = (new SiteTrain())->where('cate_id', $cate_id)->count();
         } else {
             $data = (new SiteTrain())->field(['id', 'title', 'descript', 'image'])->limit(($page - 1) * $limit, $limit)->order('sort')->order('id')->select()->toArray() ?? [];
+            $num = (new SiteTrain())->count();
         }
-        return json_encode($data);
+        return json_encode([
+            'list' => $data,
+            'page' => $page,
+            'num' => $num,
+            'page_num' => ceil($num / $limit)
+        ]);
     }
 
     public function detail($id)

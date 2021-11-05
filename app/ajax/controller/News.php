@@ -20,7 +20,13 @@ class News
         foreach ($data as $k => $v) {
             $data[$k]['created'] = date('Y-m-d', strtotime($v['created']));
         }
-        return json_encode($data);
+        $num = (new SiteNews())->count();
+        return json_encode([
+            'list' => $data,
+            'page' => $page,
+            'num' => $num,
+            'page_num' => ceil($num / $limit)
+        ]);
     }
 
     public function detail($id)

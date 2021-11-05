@@ -17,6 +17,12 @@ class Cases
     {
         $limit = 18;
         $data = (new SiteCases())->field(['name', 'image'])->limit(($page - 1) * $limit, $limit)->order('sort','asc')->select()->toArray() ?? [];
-        return json_encode($data);
+        $num = (new SiteCases())->count();
+        return json_encode([
+            'list' => $data,
+            'page' => $page,
+            'num' => $num,
+            'page_num' => ceil($num / $limit)
+        ]);
     }
 }
