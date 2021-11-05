@@ -41,6 +41,16 @@ class Train
     public function detail($id)
     {
         $data = (new SiteTrain())->where('id',$id)->find()->toArray();
-        return json_encode($data);
+        //获取上一篇下一篇
+        $prev = (new SiteTrain())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? [];
+        $next = (new SiteTrain())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? [];
+
+        $return = [
+            'detail'=>$data,
+            'prev'=>$prev,
+            'next'=>$next,
+        ];
+
+        return json_encode($return);
     }
 }

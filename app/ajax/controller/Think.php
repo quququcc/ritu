@@ -33,6 +33,16 @@ class Think
     {
         $data = (new SiteThink())->where('id',$id)->find()->toArray();
         $data['created'] = date('Y-m-d', strtotime($data['created']));
-        return json_encode($data);
+        //获取上一篇下一篇
+        $prev = (new SiteThink())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? [];
+        $next = (new SiteThink())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? [];
+
+        $return = [
+            'detail'=>$data,
+            'prev'=>$prev,
+            'next'=>$next,
+        ];
+
+        return json_encode($return);
     }
 }
