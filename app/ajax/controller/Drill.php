@@ -34,8 +34,8 @@ class Drill
         $data = (new SiteDrill())->where('id',$id)->find()->toArray();
         $data['created'] = date('Y年m月d日',strtotime($data['created']));
         //获取上一篇下一篇
-        $prev = (new SiteDrill())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? [];
-        $next = (new SiteDrill())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? [];
+        $prev = (new SiteDrill())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? (object)[];
+        $next = (new SiteDrill())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? (object)[];
 
         $return = [
             'detail'=>$data,
