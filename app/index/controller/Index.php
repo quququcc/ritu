@@ -15,9 +15,6 @@ class Index extends BaseController
 {
     public function index($url = 'index')
     {
-        $url = request()->url();
-        $url = str_replace('.html','',substr($url,strrpos($url,'/')+1));
-
         //自动加载对应的html文件
         return View::fetch($url);
     }
