@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/animate.min.css">
   <link rel="stylesheet" href="../css/contact.css">
-
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
       </div>
       <div class="nav">
         <ul class="nav1">
-          <li class="cur">
+          <li >
             <a href="index.html">首页</a>
           </li>
           <li>
@@ -45,7 +45,7 @@
           </li>
           <li class="drop-down">
             <a href="enterprise-train.html">企业培训</a>
-            <ul class="nav2">
+            <ul class="nav2 train-nav">
               <li>
                 <a href="">企业培训类别1</a>
               </li>
@@ -72,7 +72,7 @@
           <li>
             <a href="ThinkTank.html">管理智库</a>
           </li>
-          <li>
+          <li class="cur">
             <a href="contact.html">联系我们</a>
           </li>
         </ul>
@@ -82,10 +82,10 @@
     </div>
   </div>
   <!-- 广告区 -->
-  <div class="xg_banner">
+  <div class="xg_banner" id="banner">
     <div class="section">
       <div class="banner">
-        <a href="javascript:;"><img src="../imgs/contact_banner.png" alt="联系我们"></a>
+        <a href="javascript:;"><img src="" alt="联系我们"></a>
       </div>
     </div>
   </div>
@@ -136,10 +136,10 @@
           <p>深圳市龙岗区坂田街道天安云谷三栋D座1103</p>
         </div>
       </div>
-      <div class="contant_map wow fadeInUp d2">
-        <p>
+      <div class="contant_map wow fadeInUp d2" id="dituContent">
+        <!-- <p>
           <img src="../imgs/map.png" alt="网站地图">
-        </p>
+        </p> -->
       </div>
     </div>
   </div>

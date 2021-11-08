@@ -228,7 +228,7 @@ li.drop-down:after {
     text-align: center;
 }
 
-.footer_btm a, span {
+.footer_btm a,.footer_btm span {
     color: #999999;
     font-size: 14px;
     line-height: 43px;
@@ -240,3 +240,35 @@ li.drop-down:after {
 }
 
 /* 底部区end */
+
+/* page */
+.page-container{
+    width: 1200px;
+    margin:0 auto;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.page-lable-wrap {
+    text-align: center;
+}
+
+.page-lable-wrap span, .page-lable-wrap a {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    margin: 0 10px;
+    position: relative;
+    padding: 10px 15px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #dedede;
+    -webkit-transition: all .6s cubic-bezier(.645, .045, .355, 1);
+    transition: all .6s cubic-bezier(.645, .045, .355, 1);
+}
+
+.page-lable-wrap .current, .page-lable-wrap a:hover {
+    background: #0B69CD;
+    color: #fff;
+    border: 1px solid #0B69CD;
+}
+/* page */

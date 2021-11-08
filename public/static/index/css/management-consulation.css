@@ -135,7 +135,7 @@
     background: url(../imgs/course-bg1.png) no-repeat;
 }
 
-.section2 .section-header, .section3 .section-header {
+.section2 .section-header span, .section3 .section-header span {
     color: #fff;
 }
 
@@ -343,6 +343,76 @@
     width: calc(100% / 9);
     text-align: center;
     height: 160px;
+}
+
+.section-add .section-header {
+    margin: 0 auto;
+    padding-top: 90px;
+    position: relative;
+}
+
+.section-add .section-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 90px;
+}
+
+.section-add .solution-pro {
+    position: relative;
+    flex: 0 0 24%;
+}
+
+.solution-pro-img {}
+
+.solution-pro-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 68px;
+    background: #0F0F0F;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+}
+
+.solution-pro-title-index {
+    width: 126px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #929292;
+}
+
+.solution-pro-title-index span {
+    display: inline-block;
+    line-height: 24px;
+    color: #BABABA;
+}
+
+.solution-pro-title-index span:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.solution-pro-title-index span:last-child{
+    font-size: 16px;
+}
+
+.solution-pro-title-desc {
+    flex: 1;
+    line-height: 68px;
+    text-align: center;
+    
+}
+.solution-pro-title-desc span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
 }
 
 /* 面包屑 */

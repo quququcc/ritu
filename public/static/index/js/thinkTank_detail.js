@@ -4,7 +4,7 @@ const News_details = {
     getDetail: function () {
         let _this = this;
         let id = common.getQueryString("id")
-        ajax_get(host + `/ajax/trainDetail/${id}`,
+        ajax_get(host + `/ajax/thinkDetail/${id}`,
             true,
             {},
             (res) => {
@@ -28,8 +28,9 @@ const News_details = {
                 $(".pre_item .prevnext_title").text(prev.title)
                 $(".next_item a").attr("href", `news_details.html?id=${next.id}`)
                 $(".next_item .prevnext_title").text(next.title)
-                $(".crumbs span:last-child a").attr("href","news_details.html?id=" + detail.id)
+                $(".crumbs span:last-child a").attr("href","thinkTank_detail.html?id=" + detail.id)
                 $(".crumbs span:last-child a").text(detail.title)
+                
             },
             err => {
                 console.log(err)
@@ -40,7 +41,7 @@ const News_details = {
 
 $(function () {
     common.init()
-    common.getBanner("news")
+    common.getBanner("think")
     common.getContactInfo()
     News_details.getDetail()
 })

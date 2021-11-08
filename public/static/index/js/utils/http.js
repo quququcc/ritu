@@ -1,5 +1,5 @@
 
-const host = 'http://1.15.177.241'
+const host = 'http://1.15.177.241:8080'
 
 function ajax_post(url, allowAsync, formData, successCallback, errorCallback) {
     $.ajax({

@@ -1,10 +1,11 @@
 
 
-const PersonDetail = {
+
+const TrainDetail = {
     getDetail:function(){
         let _this = this;
         let id = common.getQueryString("id")
-        ajax_get(host + `/ajax/drillDetail/${id}`,
+        ajax_get(host + `/ajax/trainDetail/${id}`,
         true,
         {},
         (res) => {
@@ -28,18 +29,19 @@ const PersonDetail = {
             $(".pre_item .prevnext_title").text(prev.title)
             $(".next_item a").attr("href", `news_details.html?id=${next.id}`)
             $(".next_item .prevnext_title").text(next.title)
-            $(".crumbs span:last-child a").attr("href","personnel.details.html?id=" + detail.id)
+            $(".crumbs span:last-child a").attr("href","train_details.html?id=" + detail.id)
             $(".crumbs span:last-child a").text(detail.title)
+           
         },
         err => {
             console.log(err)
         })
     }
-}
+} 
 
 
 $(function(){
     common.init()
     common.getContactInfo()
-    PersonDetail.getDetail()
+    TrainDetail.getDetail()
 })
