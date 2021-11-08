@@ -44,7 +44,9 @@
     font-size: 16px;
     line-height: 40px;
 }
-
+.swiper-pagination-bullet-active{
+    background: #D70012;
+}
 /* banner */
 
 /* content */
@@ -114,7 +116,9 @@
     padding: 0 200px;
 }
 
-.section-mid span {}
+.section-mid span {
+    font-size: 30px;
+}
 
 .section-mid a {
     width: 160px;
@@ -141,18 +145,22 @@
     position: relative;
     margin-bottom: 100px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-sizing: border-box;
+    height: 237px;
 }
 
 .solution-core img {
     width: 93px;
     height: 93px;
 }
-
+.solution-core img:nth-child(2){
+    display: none;
+}
 .solution-core span {
     display: inline-block;
 }
 
-.solution-core span:nth-child(2) {
+.solution-core span:nth-child(3) {
     margin-top: 28px;
     font-size: 20px;
     color: #333;
@@ -175,9 +183,19 @@
 }
 
 .solution-core:hover {
+    background: #D70012;
     box-shadow: 0px 3px 15px 0px rgba(53, 100, 230, 0.23);
 }
-
+.solution-core:hover span:nth-child(3){
+    color:#fff;
+    height: 52px;
+}
+.solution-core:hover img:nth-child(1){
+    display: none;
+}
+.solution-core:hover img:nth-child(2){
+    display: block;
+}
 .solution-core:hover .solution-core-more {
     display: block;
 }
@@ -271,9 +289,11 @@
     width: 100%;
 }
 
-.course-box:hover .course-title {
-    color: #D70012;
+.course-box:hover .course-title{
     border-bottom: 1px solid #D70012;
+}
+.course-box:hover .course-title a{
+    color: #D70012;
 }
 
 .section4 {
@@ -362,7 +382,10 @@
 .section4-content .team-box:nth-child(1) .team-img {
     width: 295px;
 }
-
+.section4-content .team-box:nth-child(1) .team-img img{
+    width: 295px;
+    height: 295px;
+}
 .section4-content .team-box:nth-child(1) .team-title {
     display: none;
 }
@@ -469,7 +492,7 @@
 }
 
 .news-list {
-    padding: 20px 0 20px;
+    padding: 25px 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -484,8 +507,8 @@
 }
 
 .news-list-date {
-    width: 70px;
-    font-size: 16px;
+    width: 80px;
+    font-size: 14px;
     font-weight: 400;
     color: #AAAEB7;
     margin-left: 15px;
@@ -499,7 +522,7 @@
 
 .news-list .news-list-desc {
     font-size: 14px;
-    color: #272B2E;
+    color: #999;
     line-height: 18px;
     margin-top: 20px;
     display: none;
@@ -511,6 +534,9 @@
 
 .news-list:last-child {
     border-bottom: none;
+}
+.news-more{
+    color:#D70012;
 }
 
 /* content */

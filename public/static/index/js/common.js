@@ -83,11 +83,13 @@ const common = {
             loopAdditionalSlides: 100,
             observer: true,
             observeParents: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: '.swiper-pagination'
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+            pagination: {
+                el:'.swiper-pagination'
+            }
         })
     },
     getQueryString: function (name) {

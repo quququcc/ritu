@@ -114,7 +114,7 @@ const indexObj = {
                     let str = '';
                     let str2 = '';
                     res.list.forEach((item, index) => {
-                        if (index < 4) {
+                        if (index < 5) {
                             if (index == 0) {
                                 str = `<a href="news_details.html?id=${item.id}">
                         <div class="news-img wow fadeInUp d2">
@@ -143,7 +143,7 @@ const indexObj = {
                             ${item.descript}
                             </div>
                           </div>
-                          <div class="news-list-date">
+                          <div class="news-list-date">${item.created}</div>
                         </a>
                       </div>`
                             }
