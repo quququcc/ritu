@@ -28,7 +28,7 @@ const PersonDetail = {
             $(".pre_item .prevnext_title").text(prev.title)
             $(".next_item a").attr("href", `news_details.html?id=${next.id}`)
             $(".next_item .prevnext_title").text(next.title)
-            $(".crumbs span:last-child a").attr("href","personnel.details.html?id=" + detail.id)
+            $(".crumbs span:last-child a").attr("href","personnel_details.html?id=" + detail.id)
             $(".crumbs span:last-child a").text(detail.title)
         },
         err => {

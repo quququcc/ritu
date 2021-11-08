@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人才训练详情页</title>
-  <meta name="keywords" content="人才训练详情页">
-  <meta name="description" content="人才训练详情页">
+  <title>企业培训</title>
+  <meta name="keywords" content="企业培训">
+  <meta name="description" content="企业培训">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/animate.min.css">
-  <link rel="stylesheet" href="../css/personnel.details.css">
+  <link rel="stylesheet" href="../css/enterprise_train.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <a href="teamExpert.html">专家团队</a>
           </li>
           <li class="drop-down">
-            <a href="management-consulation.html">管理咨询</a>
+            <a href="management_consulation.html">管理咨询</a>
             <ul class="nav2">
               <li>
                 <a href="">管理咨询类别1</a>
@@ -42,10 +42,10 @@
               </li>
             </ul>
           </li>
-          <li class="drop-down">
-            <a href="enterprise-train.html">企业培训</a>
+          <li class="cur drop-down">
+            <a href="enterprise_train.html">企业培训</a>
             <ul class="nav2 train-nav">
-              <li>
+              <li class="cur2">
                 <a href="">企业培训类别1</a>
               </li>
               <li>
@@ -59,7 +59,7 @@
               </li>
             </ul>
           </li>
-          <li class="cur">
+          <li>
             <a href="personnel.html">人才训练</a>
           </li>
           <li>
@@ -80,70 +80,98 @@
       <div class="clear"></div>
     </div>
   </div>
-  <!-- 广告区 -->
-  <div class="xg_banner">
-    <div class="section">
-      <div class="banner">
-        <a href="javascript:;"><img src="../imgs/personnel_banner.png" alt="人才训练详情页"></a>
-      </div>
-    </div>
+  <div id="banner">
+    <img src="../imgs/train-banner.png" alt="">
   </div>
-  <!-- 内容区 -->
-  <div class="xg_content">
+  <div id="section">
     <div class="section section_crumbs">
-      <div class="crumbs">
+      <div class="crumbs wow fadeInUp d2">
         <span class="crumbs_ico"><img src="../imgs/crumbs_ico.png" alt=""></span>
         <span class="crumbs_item">
           <a href="index.html">首页</a>
         </span>
         <span class="crumbs_span">></span>
         <span class="crumbs_item">
-          <a href="news_list.html">人才训练</a>
-        </span>
-        <span class="crumbs_span">></span>
-        <span class="crumbs_item">
-          <a href="javascript:;">尚明怀笑谈咨询顾问师的酸甜苦辣</a>
+          <a href="enterprise_train.html">企业培训</a>
         </span>
       </div>
     </div>
-    <div class="section">
-      <div class="details_box">
-        <div class="details_title">
-          <h2>尚明怀笑谈咨询顾问师的酸甜苦辣</h2>
-        </div>
-        <div class="details_other">
-          <div class="data_time">
-            <span>2021年09月14日</span>
-          </div>
-        </div>
-        <div class="details_con">
-          <p>咨询行业是一个让人神往又让人却步的行业，高薪、高压力、高社会地位是它最大的特点。近年来，中国咨询行业蓬勃发展，对顾问人才的需求也日益增长。
-            很多人都认为，咨询顾问是一个头顶光环，光鲜亮丽的职业，拿着一流的薪水，坐飞机都坐“头等舱”，住酒店都住“五星级”，接触人都是“高精尖”。
-            凡事都有两面，随着高薪水而来的必定是巨大的工作压力，生活并不总是五光十色。“全国五一劳动奖章”获得者尚明怀（曾用名尚明淮）老师，以专业咨询顾问的身份，
-            和你聊一聊咨询顾问华丽生活以外的酸甜苦辣！
-          </p>
-          <p>
-            <img src="../imgs/news_list1.png" alt="">
-          </p>
-          <p>有钱能任性，华丽必有金，咨询顾问工资补贴就是高！ 一流管理咨询公司的顾问当然要拿一流的薪水，一般来说，刚入行的人年薪20-30万，一两年可涨到40-60万；通常3-5年后能到项目经理，就能拿到80万以上的薪资。至于
-            再往上，那就看是否能在行政级别上有所突破了，因为刚才所说的项目经理，实际上管理职能很弱，主要是自己干活。当你管理一个比较大的部门的时候，优秀学历加上优 秀资历加上人到中年，你就可以至少拿到100万以上了。</p>
-        </div>
-        <div class="xg_prevnext">
-          <span class="pre_item">
-            <a href="">
-              <span class="prevnext_text">上一篇：</span>
-              <span class="prevnext_title">无</span>
-            </a>
-          </span>
-          <span class="next_item">
-            <a href="">
-              <span class="prevnext_text">下一篇：</span>
-              <span class="prevnext_title">尚明怀：培训只说不做，微咨询讲完就落地！</span>
-            </a>
-          </span>
-        </div>
+    <!-- <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
       </div>
     </div>
+    <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
+      </div>
+    </div> -->
+    <!-- <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
+      </div>
+    </div>
+    <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
+      </div>
+    </div>
+    <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
+      </div>
+    </div>
+    <div class="train-box  wow fadeInUp d2">
+      <div class="train-img">
+        <a href="#"> <img src="../imgs/train1.png" alt=""></a>
+      </div>
+      <div class="train-txt">
+        <a href="#">【尚明怀】STEP“迈步”微咨询，中小...</a>
+      </div>
+      <div class="train-desc">
+        《创业维艰》里有一句话：“视角的不同会令世界上所
+        有重大事件的意义彻底发生改变。”所有企业...
+      </div>
+    </div> -->
+   
+  </div>
+  <div class="page-container">
+    <div class="page-lable-wrap wow fadeInUp d1"></div>
   </div>
   <!-- 底部区 -->
   <div class="xg_footer">
@@ -158,7 +186,7 @@
         </div>
         <div class="f_r">
           <ul>
-            <li class=" wow fadeInUp d2">
+            <li class="wow fadeInUp d2">
               <a href="javascript:;">管理咨询</a>
               <ul>
                 <li>
@@ -175,7 +203,7 @@
                 </li>
               </ul>
             </li>
-            <li class=" wow fadeInUp d2">
+            <li class="wow fadeInUp d2">
               <a href="javascript:;">咨询顾问培训</a>
               <ul>
                 <li>
@@ -186,7 +214,7 @@
                 </li>
               </ul>
             </li>
-            <li class=" wow fadeInUp d2">
+            <li class="wow fadeInUp d2">
               <a href="javascript:;">企业大学构建与培训师培养</a>
               <ul>
                 <li>
@@ -198,7 +226,7 @@
                 </li>
               </ul>
             </li>
-            <li class=" wow fadeInUp d2">
+            <li class="wow fadeInUp d2">
               <a href="javascript:;">关于我们</a>
               <ul>
                 <li>
@@ -213,7 +241,7 @@
                 </li>
               </ul>
             </li>
-            <li class=" wow fadeInUp d2">
+            <li class="wow fadeInUp d2">
               <a href="javascript:;">管理智库</a>
               <ul>
                 <li>
@@ -239,8 +267,9 @@
 <script src="../js/utils/jquery.min.js"></script>
 <script src="../js/utils/swiper.min.js"></script>
 <script src="../js/utils/wow.min.js"></script>
+<script src="../js/utils/jquery.pagination.js"></script>
 <script src="../js/utils/http.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/personnel.details.js"></script>
+<script src="../js/enterprise_train.js"></script>
 
 </html>

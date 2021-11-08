@@ -23,13 +23,13 @@ const Person = {
         data.forEach(item => {
             str += `<div class="personal-box wow fadeInUp d2">
             <div class="personal-img">
-              <a href="personnel.details.html?id=${item.id}">
+              <a href="personnel_details.html?id=${item.id}">
                 <img src="${item.image}" alt="">
               </a>
             </div>
             <div class="personal-txt">
               <div class="personal-title">
-                <a href="personnel.details.html?id=${item.id}">
+                <a href="personnel_details.html?id=${item.id}">
                   ${item.title}</a>
               </div>
               <div class="personal-date">

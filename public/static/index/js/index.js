@@ -26,12 +26,12 @@ const indexObj = {
                         str += `
                         <div class="course-box  wow fadeInUp d2">
                         <div class="course-img">
-                        <a hef="personnel.details.html?id=${item.id}">
+                        <a hef="personnel_details.html?id=${item.id}">
                             <img src="${item.image}" alt="">
                         </a>
                         </div>
                         <div class="course-title">
-                            <a href="personnel.details.html?id=${item.id}"> ${item.title}</a>
+                            <a href="personnel_details.html?id=${item.id}"> ${item.title}</a>
                         </div>
                     </div>`
                     })

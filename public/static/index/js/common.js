@@ -110,7 +110,7 @@ const common = {
                 res.forEach(item => {
                     str += `
                     <li>
-                        <a href="enterprise-train.html?cateId=${item.id}">${item.name}</a>
+                        <a href="enterprise_train.html?cateId=${item.id}">${item.name}</a>
                     </li>
                     `
                 })
