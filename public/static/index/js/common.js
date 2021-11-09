@@ -22,7 +22,7 @@ const common = {
             {},
             (res) => {
                 res = JSON.parse(res)
-                console.log(res)
+                console.log("indexbanner",res)
                 if (sign == 'index') {
                     if (res && res.length > 0) {
                         let str = "";
@@ -32,7 +32,7 @@ const common = {
                               <div class="banner-txt">
                               <div class="banner-title  wow fadeInLeft2">${item.title}</div>
                               <div class="banner-slogan  wow fadeInLeft2">
-                              ${item.title}
+                              ${item.title_s}
                               </div>
                               <a href="${item.to_url}" class="banner-btn  wow fadeInLeft2">
                                 了解详情
