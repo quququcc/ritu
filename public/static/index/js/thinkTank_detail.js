@@ -43,5 +43,7 @@ $(function () {
     common.init()
     common.getBanner("think")
     common.getContactInfo()
+    common.getNavList()
+    common.getConfigInfo()
     News_details.getDetail()
 })

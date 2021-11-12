@@ -62,6 +62,8 @@ const ThinkTak = {
 $(function(){
     common.init()
     common.getContactInfo()
+    common.getNavList()
+    common.getConfigInfo()
     common.getBanner("think")
     ThinkTak.getList()
 })

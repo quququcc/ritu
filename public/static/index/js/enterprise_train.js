@@ -65,6 +65,7 @@ $(function () {
     common.init()
     common.getBanner("train")
     common.getNavList()
+    common.getConfigInfo()
     common.getContactInfo()
     TrainObj.getTrainList()
 })

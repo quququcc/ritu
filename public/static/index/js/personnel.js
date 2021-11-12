@@ -68,6 +68,8 @@ const Person = {
 
 $(function(){
     common.init()
+    common.getNavList()
     common.getContactInfo()
+    common.getConfigInfo()
     Person.getList()
 })

@@ -61,7 +61,8 @@ const common = {
                 res = JSON.parse(res)
                 console.log(res)
                 if (res && res.site_name) {
-                    // $(".logo img").attr("src",res.logo_image)
+                    $(".logo img").attr("src",res.logo_image)
+                    $(".font_logo a img").attr("src",res.logo_image)
                     // $(".f_l p:nth-child(2)").text()
                     $(".w1200>span").text(res.site_name + " " + res.site_beian + " ")
                     $(".w1200>a").text(res.site_copyright)

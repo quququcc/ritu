@@ -41,5 +41,7 @@ const PersonDetail = {
 $(function(){
     common.init()
     common.getContactInfo()
+    common.getNavList()
+    common.getConfigInfo()
     PersonDetail.getDetail()
 })

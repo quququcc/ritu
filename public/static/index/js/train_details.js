@@ -43,5 +43,7 @@ const TrainDetail = {
 $(function(){
     common.init()
     common.getContactInfo()
+    common.getNavList()
+    common.getConfigInfo()
     TrainDetail.getDetail()
 })

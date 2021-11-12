@@ -42,5 +42,7 @@ $(function () {
     common.init()
     common.getBanner("news")
     common.getContactInfo()
+    common.getConfigInfo()
+    common.getNavList()
     News_details.getDetail()
 })

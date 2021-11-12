@@ -41,5 +41,6 @@ $(function(){
     common.getBanner("team")
     common.getNavList()
     common.getContactInfo()
+    common.getConfigInfo()
     team.getTeamList()
 })

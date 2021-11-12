@@ -59,6 +59,8 @@ const Cate_list = {
 
 $(function(){
     common.init()
+    common.getConfigInfo()
+    common.getNavList()
     common.getBanner("case")
     common.getContactInfo()
     Cate_list.getList()

@@ -119,6 +119,8 @@ $(function () {
     common.init()
     common.getBanner("contact")
     common.getContactInfo()
+    common.getConfigInfo()
+    common.getNavList()
     contactObj.getContactInfo()
     contactObj.initMap()
 })
