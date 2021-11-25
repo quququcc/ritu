@@ -117,7 +117,7 @@ const common = {
                     </li>
                     `
                 })
-                $(".train-nav").html(str)
+                // $(".train-nav").html(str)
             }
 
         },
