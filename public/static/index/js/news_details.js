@@ -4,7 +4,7 @@ const News_details = {
     getDetail: function () {
         let _this = this;
         let id = common.getQueryString("id")
-        ajax_get(host + `/ajax/trainDetail/${id}`,
+        ajax_get(host + `/ajax/newsDetail/${id}`,
             true,
             {},
             (res) => {
