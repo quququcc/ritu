@@ -1,4 +1,4 @@
-<?php /*a:1:{s:71:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\teamExpert.html";i:1635860008;}*/ ?>
+<?php /*a:1:{s:71:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\teamExpert.html";i:1637836742;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +19,7 @@
   <div class="xg_header">
     <div class="section w1200">
       <div class="logo">
-        <h1><a href="/"><img src="../imgs/logo.png" alt="尚明怀"></a></h1>
+        <h1><a href="/"><img src="" alt="尚明怀"></a></h1>
       </div>
       <div class="nav">
         <ul class="nav1">
@@ -30,38 +30,19 @@
             <a href="teamExpert.html">专家团队</a>
           </li>
           <li class="drop-down">
-            <a href="management-consulation.html">管理咨询</a>
+            <a href="management_consulation.html">管理咨询</a>
             <ul class="nav2">
-              <li>
-                <a href="">管理咨询类别1</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别2</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别3</a>
-              </li>
+              
             </ul>
           </li>
           <li class="drop-down">
-            <a href="enterprise-train.html">企业培训</a>
-            <ul class="nav2">
-              <li>
-                <a href="">企业培训类别1</a>
-              </li>
-              <li>
-                <a href="">企业培训类别2</a>
-              </li>
-              <li>
-                <a href="">企业培训类别3</a>
-              </li>
-              <li>
-                <a href="">企业培训类别4</a>
-              </li>
+            <a href="enterprise_train.html">企业培训</a>
+            <ul class="nav2 train-nav">
+              
             </ul>
           </li>
           <li>
-            <a href="personnel.html">人才训练</a>
+            <a href="personnel.html">咨询师训练</a>
           </li>
           <li>
             <a href="case_list.html">服务案例</a>
@@ -98,7 +79,7 @@
       </div>
     </div>
     <div class="team-container">
-      <div class="team-box wow fadeInUp d2">
+      <!-- <div class="team-box wow fadeInUp d2">
         <div class="team-box-img">
           <img src="../imgs/team1.jpg" alt="">
         </div>
@@ -169,7 +150,7 @@
             擅长领域：组织变革 公司平台化运营 流程再造 绩效管理 咨询顾问师训练……
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- 底部区 -->

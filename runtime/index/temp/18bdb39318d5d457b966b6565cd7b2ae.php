@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\case_list.html";i:1635860008;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\case_list.html";i:1637808603;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,38 +30,19 @@
             <a href="teamExpert.html">专家团队</a>
           </li>
           <li class="drop-down">
-            <a href="management-consulation.html">管理咨询</a>
+            <a href="management_consulation.html">管理咨询</a>
             <ul class="nav2">
-              <li>
-                <a href="">管理咨询类别1</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别2</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别3</a>
-              </li>
+              
             </ul>
           </li>
           <li class="drop-down">
-            <a href="enterprise-train.html">企业培训</a>
-            <ul class="nav2">
-              <li>
-                <a href="">企业培训类别1</a>
-              </li>
-              <li>
-                <a href="">企业培训类别2</a>
-              </li>
-              <li>
-                <a href="">企业培训类别3</a>
-              </li>
-              <li>
-                <a href="">企业培训类别4</a>
-              </li>
+            <a href="enterprise_train.html">企业培训</a>
+            <ul class="nav2 train-nav">
+              
             </ul>
           </li>
           <li>
-            <a href="personnel.html">人才训练</a>
+            <a href="personnel.html">咨询师训练</a>
           </li>
           <li class="cur">
             <a href="">服务案例</a>
@@ -82,7 +63,7 @@
     </div>
   </div>
   <!-- 广告区 -->
-  <div class="xg_banner">
+  <div class="xg_banner" id="banner">
     <div class="section">
       <div class="banner">
         <a href="javascript:;"><img src="../imgs/case_banner.png" alt="服务案列"></a>
@@ -105,7 +86,7 @@
     </div>
     <div class="section">
       <div class="case_box">
-        <div class="case_list wow fadeInUp d2">
+        <!-- <div class="case_list wow fadeInUp d2">
           <div class="case_img">
             <img src="../imgs/case1.png" alt="">
           </div>
@@ -212,9 +193,13 @@
             <img src="../imgs/case1.png" alt="">
           </div>
           <div class="case_text">文字案列</div>
-        </div>
+        </div> -->
+      </div>
+      <div class="page-container">
+        <div class="page-lable-wrap wow fadeInUp d1"></div>
       </div>
     </div>
+    
   </div>
   <!-- 底部区 -->
   <div class="xg_footer">
@@ -310,6 +295,7 @@
 <script src="../js/utils/jquery.min.js"></script>
 <script src="../js/utils/swiper.min.js"></script>
 <script src="../js/utils/wow.min.js"></script>
+<script src="../js/utils/jquery.pagination.js"></script>
 <script src="../js/utils/http.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/case_list.js"></script>

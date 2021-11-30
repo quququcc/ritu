@@ -10,10 +10,10 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('css/:css', 'Index/css');
-Route::get('js/:dir/:js', 'Index/js');
-Route::get('js/:js', 'Index/js');
-Route::get('imgs/:imgs', 'Index/imgs');
+//Route::get('css/:css', 'Index/css');
+//Route::get('js/:dir/:js', 'Index/js');
+//Route::get('js/:js', 'Index/js');
+//Route::get('imgs/:imgs', 'Index/imgs');
 
 //前台页面路由
 Route::get('index.html', 'Index/index');

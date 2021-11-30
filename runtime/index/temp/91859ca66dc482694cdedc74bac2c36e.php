@@ -1,4 +1,4 @@
-<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\personnel.html";i:1635860008;}*/ ?>
+<?php /*a:1:{s:70:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\personnel.html";i:1637808603;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,38 +30,19 @@
             <a href="teamExpert.html">专家团队</a>
           </li>
           <li class="drop-down">
-            <a href="management-consulation.html">管理咨询</a>
+            <a href="management_consulation.html">管理咨询</a>
             <ul class="nav2">
-              <li>
-                <a href="">管理咨询类别1</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别2</a>
-              </li>
-              <li>
-                <a href="">管理咨询类别3</a>
-              </li>
+              
             </ul>
           </li>
           <li class="drop-down">
-            <a href="enterprise-train.html">企业培训</a>
-            <ul class="nav2">
-              <li>
-                <a href="">企业培训类别1</a>
-              </li>
-              <li>
-                <a href="">企业培训类别2</a>
-              </li>
-              <li>
-                <a href="">企业培训类别3</a>
-              </li>
-              <li>
-                <a href="">企业培训类别4</a>
-              </li>
+            <a href="enterprise_train.html">企业培训</a>
+            <ul class="nav2 train-nav">
+              
             </ul>
           </li>
           <li class="cur">
-            <a href="personnel.html">人才训练</a>
+            <a href="personnel.html">咨询师训练</a>
           </li>
           <li>
             <a href="case_list.html">服务案例</a>
@@ -93,11 +74,31 @@
         </span>
         <span class="crumbs_span">></span>
         <span class="crumbs_item">
-          <a href="personnel.html">人才训练</a>
+          <a href="personnel.html">咨询师训练</a>
         </span>
       </div>
     </div>
-    <div class="personal-box wow fadeInUp d2">
+    <!-- <div class="personal-box wow fadeInUp d2">
+      <div class="personal-img">
+        <a href="#">
+          <img src="../imgs/personal1.png" alt="">
+        </a>
+      </div>
+      <div class="personal-txt">
+        <div class="personal-title">
+          <a href="#">
+            尚明怀谈咨询业的未来</a>
+        </div>
+        <div class="personal-date">
+          2021年09月10日
+        </div>
+        <div class="personal-desc">
+          2021年3月，尚明怀（曾用名尚明淮）刚从河北新发地集团辞去副总裁的职位身份回到深圳，专心打
+          理他的劳模工作室，接着有四五个咨询项目找上门来，其中既有市值2500亿的亿纬锂能，也有...
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="personal-box wow fadeInUp d2">
       <div class="personal-img">
         <a href="#">
           <img src="../imgs/personal1.png" alt="">
@@ -156,27 +157,10 @@
           理他的劳模工作室，接着有四五个咨询项目找上门来，其中既有市值2500亿的亿纬锂能，也有...
         </div>
       </div>
-    </div>
-    <div class="personal-box wow fadeInUp d2">
-      <div class="personal-img">
-        <a href="#">
-          <img src="../imgs/personal1.png" alt="">
-        </a>
-      </div>
-      <div class="personal-txt">
-        <div class="personal-title">
-          <a href="#">
-            尚明怀谈咨询业的未来</a>
-        </div>
-        <div class="personal-date">
-          2021年09月10日
-        </div>
-        <div class="personal-desc">
-          2021年3月，尚明怀（曾用名尚明淮）刚从河北新发地集团辞去副总裁的职位身份回到深圳，专心打
-          理他的劳模工作室，接着有四五个咨询项目找上门来，其中既有市值2500亿的亿纬锂能，也有...
-        </div>
-      </div>
-    </div>
+    </div> -->
+  </div>
+  <div class="page-container">
+    <div class="page-lable-wrap wow fadeInUp d1"></div>
   </div>
   <!-- 底部区 -->
   <div class="xg_footer">
@@ -272,6 +256,7 @@
 <script src="../js/utils/jquery.min.js"></script>
 <script src="../js/utils/swiper.min.js"></script>
 <script src="../js/utils/wow.min.js"></script>
+<script src="../js/utils/jquery.pagination.js"></script>
 <script src="../js/utils/http.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/personnel.js"></script>

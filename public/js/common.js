@@ -17,41 +17,45 @@ const common = {
     },
     getBanner: function (sign) {
         let _this = this;
-        ajax_get(host + `/ajax/banner/${sign}`,
-            true,
-            {},
-            (res) => {
-                res = JSON.parse(res)
-                console.log("indexbanner",res)
-                if (sign == 'index') {
-                    if (res && res.length > 0) {
-                        let str = "";
-                        res.forEach(item => {
-                            str += ` <div class="swiper-slide">
-                              <img src="${item.background}" alt="${item.title}">
-                              <div class="banner-txt">
-                              <div class="banner-title  wow fadeInLeft2">${item.title}</div>
-                              <div class="banner-slogan  wow fadeInLeft2">
-                              ${item.title_s}
-                              </div>
-                              <a href="${item.to_url}" class="banner-btn  wow fadeInLeft2">
-                                了解详情
-                              </a>
-                            </div>
-                          </div>
-                          `
-                        })
-                        $(".index-banner").html(str)
-                        _this.indexSwiper()
-                    }
-                } else {
-                    $("#banner img").attr("src", res.background)
-                }
-            },
-            err => {
-                console.log(err)
-            }
-        );
+        if(sign == 'index'){
+            _this.indexSwiper()
+        }
+
+        // ajax_get(host + `/ajax/banner/${sign}`,
+        //     true,
+        //     {},
+        //     (res) => {
+        //         res = JSON.parse(res)
+        //         console.log("indexbanner",res)
+        //         if (sign == 'index') {
+        //             if (res && res.length > 0) {
+        //                 let str = "";
+        //                 res.forEach(item => {
+        //                     str += ` <div class="swiper-slide">
+        //                       <img src="${item.background}" alt="${item.title}">
+        //                       <div class="banner-txt">
+        //                       <div class="banner-title  wow fadeInLeft2">${item.title}</div>
+        //                       <div class="banner-slogan  wow fadeInLeft2">
+        //                       ${item.title_s}
+        //                       </div>
+        //                       <a href="${item.to_url}" class="banner-btn  wow fadeInLeft2">
+        //                         了解详情
+        //                       </a>
+        //                     </div>
+        //                   </div>
+        //                   `
+        //                 })
+        //                 $(".index-banner").html(str)
+        //                 _this.indexSwiper()
+        //             }
+        //         } else {
+        //             $("#banner img").attr("src", res.background)
+        //         }
+        //     },
+        //     err => {
+        //         console.log(err)
+        //     }
+        // );
     },
     getConfigInfo: function () {
         ajax_get(host + `/ajax/config`,

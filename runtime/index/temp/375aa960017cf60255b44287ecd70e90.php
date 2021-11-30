@@ -1,3 +1,4 @@
+<?php /*a:1:{s:83:"D:\phpstudy_pro\WWW\shang-ming-bei\app\index\view\index\management_consulation.html";i:1637808603;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
   <div class="xg_header">
     <div class="section w1200">
       <div class="logo">
-        <h1><a href="/"><img src="" alt="尚明怀"></a></h1>
+        <h1><a href="/"><img src="../imgs/logo.png" alt="尚明怀"></a></h1>
       </div>
       <div class="nav">
         <ul class="nav1">
