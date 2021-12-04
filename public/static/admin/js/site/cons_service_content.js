@@ -18,7 +18,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 init: init,
                 cols: [[
                     {type: 'checkbox'},
-                    {field: 'id', title: 'id'},
+                    // {field: 'id', title: 'id'},
                     {field: 'siteConsServiceTitle.title', title: '所属分类'},
                     {field: 'title', title: '标题'},
                     {field: 'image', title: '图片', templet: ea.table.image},
