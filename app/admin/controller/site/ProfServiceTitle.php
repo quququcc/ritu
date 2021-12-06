@@ -43,7 +43,7 @@ class ProfServiceTitle extends AdminController
         try {
             $update = [
                 'title'=>$post['title'],
-                'title_s'=>$post['title_s'],
+                'title_s'=>$post['title_s'] ?? '',
             ];
             $this->model->where('id',1)->update($update);
         } catch (\Exception $e) {
