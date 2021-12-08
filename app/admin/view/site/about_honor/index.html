@@ -1,0 +1,46 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">荣誉资质</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form id="app-form" class="layui-form layuimini-form">
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">安全保障</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" rows="6" name="text1" class="layui-textarea" lay-verify="required" >{$data.text1|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">行业领军</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" rows="6" name="text2" class="layui-textarea" lay-verify="required" >{$data.text2|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">荣誉图片</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="image" class="layui-input layui-col-xs6"  value="{$data.image|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="image" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_image" data-upload-select="image" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.aboutHonor/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

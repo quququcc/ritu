@@ -1,0 +1,46 @@
+<div class="layuimini-container">
+    <form id="app-form" class="layui-form layuimini-form">
+        
+        <div class="layui-form-item">
+            <label class="layui-form-label">岗位类型</label>
+            <div class="layui-input-block">
+                <select name="cate_id" lay-verify="required">
+                    <option value=''></option>
+                    {foreach $getSiteAboutJobCateList as $k=>$v}
+                    <option value='{$k}' >{$v}</option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">职位名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="job_name" class="layui-input" lay-verify="required" placeholder="请输入职位名称" value="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地点</label>
+            <div class="layui-input-block">
+                <input type="text" name="job_addr" class="layui-input" lay-verify="required" placeholder="请输入地点" value="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">招聘详情</label>
+            <div class="layui-input-block">
+                <textarea name="content" rows="20" class="layui-textarea editor" 招聘详情 placeholder="请输入招聘详情"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">发布时间</label>
+            <div class="layui-input-block">
+                <input type="text" name="publish_time" data-date="" data-date-type="date" class="layui-input"  placeholder="默认当前时间" value="">
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <div class="layui-form-item text-center">
+            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit>确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+        </div>
+
+    </form>
+</div>

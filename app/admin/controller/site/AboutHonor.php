@@ -8,9 +8,9 @@ use EasyAdmin\annotation\NodeAnotation;
 use think\App;
 
 /**
- * @ControllerAnnotation(title="site_about_us")
+ * @ControllerAnnotation(title="site_about_honor")
  */
-class AboutUs extends AdminController
+class AboutHonor extends AdminController
 {
 
     use \app\admin\traits\Curd;
@@ -19,7 +19,7 @@ class AboutUs extends AdminController
     {
         parent::__construct($app);
 
-        $this->model = new \app\admin\model\SiteAboutUs();
+        $this->model = new \app\admin\model\SiteAboutHonor();
         
     }
 
@@ -42,11 +42,9 @@ class AboutUs extends AdminController
         $post = $this->request->post();
         try {
             $update = [
-                'text'=>$post['text'],
-                'create_year'=>$post['create_year'] ?? 0,
-                'service_num'=>$post['service_num'] ?? 0,
-                'staff_num'=>$post['staff_num'] ?? 0,
-                'filiale_num'=>$post['filiale_num'] ?? 0,
+                'text1'=>$post['text1'],
+                'text2'=>$post['text2'] ?? '',
+                'image'=>$post['image'] ?? '',
             ];
             $this->model->where('id',1)->update($update);
         } catch (\Exception $e) {
