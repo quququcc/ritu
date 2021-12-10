@@ -37,8 +37,10 @@
         <div class="layui-form-item">
             <label class="layui-form-label">讲师</label>
             <div class="layui-input-block">
-                <input type="checkbox" name="lecturers[]" lay-skin="primary" title="写作" value="1" checked="">
-                <input type="checkbox" name="lecturers[]" lay-skin="primary" title="阅读" value="2">
+                {foreach $lecturers as $lec}
+                <input type="checkbox" name="checklec" lay-filter="lecturers" lay-skin="primary" title="{$lec.name|default=''}" value="{$lec.id|default=''}">
+                {/foreach}
+                <input type="hidden" id="lecturers" name="lecturers" value="{$row.lecturers|default=''}">
             </div>
         </div>
 
@@ -82,3 +84,4 @@
 
     </form>
 </div>
+<script type="text/javascript"  src="/static/admin/js/site/res_course_edit.js"></script>

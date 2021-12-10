@@ -2,6 +2,8 @@
 
 namespace app\admin\controller\site;
 
+use app\admin\model\SiteResCourseCate;
+use app\admin\model\SiteResCourseLecturer;
 use app\common\controller\AdminController;
 use app\Request;
 use EasyAdmin\annotation\ControllerAnnotation;
@@ -26,6 +28,9 @@ class ResCourse extends AdminController
 
         $this->assign('getSiteResCourseLecturerList', $this->model->getSiteResCourseLecturerList());
 
+        $lecturers = (new SiteResCourseLecturer())->select()->toArray() ?? [];
+        $this->assign('lecturers',$lecturers);
+
     }
 
     
@@ -40,11 +45,11 @@ class ResCourse extends AdminController
             }
             list($page, $limit, $where) = $this->buildTableParames();
             $count = $this->model
-                ->withJoin('siteResCourseLecturer', 'LEFT')
+                ->withJoin('siteResCourseCate', 'LEFT')
                 ->where($where)
                 ->count();
             $list = $this->model
-                ->withJoin('siteResCourseLecturer', 'LEFT')
+                ->withJoin('siteResCourseCate', 'LEFT')
                 ->where($where)
                 ->page($page, $limit)
                 ->order($this->sort)
