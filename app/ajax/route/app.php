@@ -10,41 +10,31 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-//banner图
-Route::group('banner', function () {
-    Route::get('/:sign', 'Banner/getBanner');
-});
-
-//获取页面配置信息
-Route::get('config', 'Config/index');
-
-//首页数据
+//首页
 Route::get('index', 'Index/index');
-
-//专家团队
-Route::get('team', 'Team/index');
-
-//企业培训
-Route::get('trainCate', 'Train/cate');
-Route::get('train/[:cate_id]/[:page]$', 'Train/list');
-Route::get('trainDetail/:id', 'Train/detail');
-
-//人才训练
-Route::get('drill/[:page]$', 'Drill/list');
-Route::get('drillDetail/:id', 'Drill/detail');
-
-//服务案例
-Route::get('case/[:page]$', 'Cases/list');
-
-//新闻中心
-Route::get('news/[:page]$', 'News/list');
-Route::get('newsDetail/:id', 'News/detail');
-
-//管理智库
-Route::get('think/[:page]$', 'Think/list');
-Route::get('thinkDetail/:id', 'Think/detail');
-
-//联系我们
-Route::get('contact', 'Contact/index');
+//innojoy
+Route::get('innojoy', 'Innojoy/index');
+//innojet
+Route::get('innojet', 'Innojet/index');
+//商标
+Route::get('brand', 'Brand/index');
+//咨询
+Route::get('cons', 'Cons/index');
+//关于我们
+Route::get('about', 'About/index');
+//招聘岗位分类
+Route::get('jobCate', 'Job/cate');
+Route::get('jobList/[:cate_id]/[:page]', 'Job/index');
+//资源中心
+Route::get('resource', 'Resource/index');
+//白皮书
+Route::get('book/[:page]', 'Book/index');
+//榜单
+Route::get('top/[:page]', 'Top/index');
+//动态
+Route::get('newsDetail/[:id]', 'News/detail');
+Route::get('news/[:page]', 'News/index');
+//学院
+Route::get('courseHot', 'Course/hot');
 
 

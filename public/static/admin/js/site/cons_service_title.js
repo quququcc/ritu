@@ -16,12 +16,28 @@ define(["jquery", "easy-admin"], function ($, ea) {
         index: function () {
             ea.table.render({
                 init: init,
+                toolbar: ['refresh'],
+                page:false,
                 cols: [[
-                    {type: 'checkbox'},
+                    // {type: 'checkbox'},
                     // {field: 'id', title: 'id'},
                     {field: 'title', title: '标题'},
-                    {field: 'sort', title: '排序', edit: 'text'},
-                    {width: 250, title: '操作', templet: ea.table.tool},
+                    // {field: 'sort', title: '排序', edit: 'text'},
+                    {
+                        width: 250,
+                        title: '操作',
+                        templet: ea.table.tool,
+                        operat: [
+                            [{
+                                text: '编辑',
+                                url: init.edit_url,
+                                method: 'open',
+                                auth: 'edit',
+                                class: 'layui-btn layui-btn-xs layui-btn-success',
+                                extend: 'data-full="true"',
+                            }]
+                        ]
+                    }
                 ]],
             });
 

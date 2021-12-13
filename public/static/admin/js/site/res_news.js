@@ -20,6 +20,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {type: 'checkbox'},
                     // {field: 'id', title: 'id'},
                     {field: 'title', title: '标题'},
+                    {field: 'image', title: '展示图',templet: ea.table.image},
                     {field: 'descript', title: '摘要'},
                     {field: 'view_num', title: '浏览量',sort: true},
                     {field: 'publish_time', title: '发布时间',sort:true},

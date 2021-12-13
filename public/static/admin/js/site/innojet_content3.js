@@ -19,7 +19,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                 cols: [[
                     {type: 'checkbox'},
                     // {field: 'id', title: 'id'},
-                    {field: 'titke', title: '标题'},
+                    {field: 'title', title: '标题'},
                     {field: 'text', title: '内容项'},
                     {field: 'image_def', title: '未选中状态图标', templet: ea.table.image},
                     {field: 'image_act', title: '选中状态的图标', templet: ea.table.image},

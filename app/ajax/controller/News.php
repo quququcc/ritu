@@ -2,47 +2,43 @@
 /**
  * Created by PhpStorm.
  * User: weiming
- * Date: 2021/11/4
- * Time: 23:42
+ * Date: 2021/12/14
+ * Time: 4:46
  */
 
 namespace app\ajax\controller;
 
 
-use app\admin\model\SiteNews;
+use app\admin\model\SiteResNews;
 
 class News
 {
-    public function list($page = 1)
+    public function index($page = 1)
     {
-        $limit = 10;
-        $data = (new SiteNews())->field(['id', 'title', 'descript', 'image', 'created'])->limit(($page - 1) * $limit, $limit)->order('created')->select()->toArray() ?? [];
-        foreach ($data as $k => $v) {
-            $data[$k]['created'] = date('Y-m-d', strtotime($v['created']));
+        $data = (new SiteResNews())->field('id,title,descript,image,view_num,publish_time')->order('publish_time')->page($page, 5)->select();
+        $count = (new SiteResNews())->count();
+
+        foreach ($data as &$v) {
+            $v['publish_time'] = date('Y/m/d', strtotime($v['publish_time']));
         }
-        $num = (new SiteNews())->count();
+
         return json_encode([
             'list' => $data,
-            'page' => $page,
-            'num' => $num,
-            'page_num' => ceil($num / $limit)
+            'page' => (int)$page,
+            'limit' => 5,
+            'page_num' => ceil($count / 5),
         ]);
     }
 
-    public function detail($id)
+    public function detail($id = 1)
     {
-        $data = (new SiteNews())->where('id',$id)->find()->toArray();
-        $data['created'] = date('Y-m-d', strtotime($data['created']));
-        //获取上一篇下一篇
-        $prev = (new SiteNews())->field(['id','title'])->where('id','<',$id)->limit(1)->find() ?? (object)[];
-        $next = (new SiteNews())->field(['id','title'])->where('id','>',$id)->limit(1)->find() ?? (object)[];
+        $data = (new SiteResNews())->where('id', $id)->find();
 
-        $return = [
+        $hot = (new SiteResNews())->field('id,title,descript,image,view_num,publish_time')->where('id', '<>', $id)->limit(3)->order('publish_time')->select();
+
+        return json_encode([
             'detail'=>$data,
-            'prev'=>$prev,
-            'next'=>$next,
-        ];
-
-        return json_encode($return);
+            'hot_news'=>$hot
+        ]);
     }
 }

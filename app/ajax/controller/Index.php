@@ -1,39 +1,63 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: weiming
+ * Date: 2021/12/14
+ * Time: 1:40
+ */
 
 namespace app\ajax\controller;
 
-use app\admin\model\SiteCases;
-use app\admin\model\SiteDrill;
-use app\admin\model\SiteNews;
-use app\admin\model\SiteTeam;
+
+use app\admin\model\SiteBanner;
+use app\admin\model\SiteIndexContent1;
+use app\admin\model\SiteIndexContent1Title;
+use app\admin\model\SiteIndexContent2;
+use app\admin\model\SiteIndexContent2Bottom;
+use app\admin\model\SiteIndexContent2Title;
+use app\admin\model\SiteIndexContent3;
+use app\admin\model\SiteIndexContent3Title;
+use app\admin\model\SiteResBook;
+use app\admin\model\SiteResCourse;
+use app\admin\model\SiteResNews;
+use app\admin\model\SiteResTop;
 
 class Index
 {
-    /**
-     * @note: 首页所有数据接口
-     * @return string
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\DbException
-     * @throws \think\db\exception\ModelNotFoundException
-     */
     public function index()
     {
-        $data = array();
-        //咨询产品与落地方案
+        //banner数据
+        $data['banner'] = (new SiteBanner())->where('is_show', 1)->order('sort')->where('id', 1)->find();
+        unset($data['banner']['id']);
+        unset($data['banner']['is_show']);
+        unset($data['banner']['sort']);
 
-        //项目服务优势
+        //模块1
+        $data['model1'] = [
+            'title' => (new SiteIndexContent1Title())->where('id', 1)->value('title'),
+            'data' => (new SiteIndexContent1())->field('title,text')->order('sort')->select(),
+        ];
 
-        //课程落地风采 使用人才训练内容
-        $data['style'] = (new SiteDrill())->field(['id', 'title', 'image'])->limit(4)->order('created')->select()->toArray() ?? [];
+        //模块2
+        $data['model2'] = [
+            'title' => (new SiteIndexContent2Title())->where('id', 1)->value('title'),
+            'data' => (new SiteIndexContent2())->field('title,text,image')->order('sort')->select(),
+            'bottom' => (new SiteIndexContent2Bottom())->field('title,image')->order('sort')->select(),
+        ];
 
-        //专家团队介绍
-        $data['team'] = (new SiteTeam())->order('sort')->select()->toArray();
+        //模块3
+        $data['model3'] = [
+            'title' => (new SiteIndexContent3Title())->where('id', 1)->value('title'),
+            'data' => (new SiteIndexContent3())->field('image')->order('sort')->select(),
+        ];
 
-        //服务案例展示
-        $data['case'] = (new SiteCases())->field(['name', 'image'])->limit(18)->order('sort','asc')->select()->toArray() ?? [];
-
-        //新闻资讯
-        $data['news'] = (new SiteNews())->field(['id', 'title', 'descript', 'image', 'created'])->limit(5)->order('created')->select()->toArray() ?? [];
+        //模块4 知识产权
+        $data['model4'] = [
+            'book' => (new SiteResBook())->field('id,title,image,descript,path')->order('id')->limit(3)->select(),
+            'top' => (new SiteResTop())->withoutField('sort')->order('id')->limit(3)->select(),
+            'course' => (new SiteResCourse())->field('id,title,image,descript')->order('id')->limit(3)->select(),
+            'news' => (new SiteResNews())->field('id,title,descript')->order('id')->limit(3)->select(),
+        ];
 
         return json_encode($data);
     }

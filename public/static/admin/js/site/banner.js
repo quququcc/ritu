@@ -21,7 +21,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'title_s', title: '副标题'},
                     {field: 'to_url', title: '跳转链接'},
                     {field: 'background', title: 'Banner图', templet: ea.table.image},
-                    {field: 'background_m', title: '移动端', templet: ea.table.image},
                     {field: 'is_show', search: 'select', selectList: {"1":"显示","0":"隐藏"}, title: '是否显示'},
                     {field: 'sort', title: '排序', edit: 'text'},
                     {width: 250, title: '操作', templet: ea.table.tool},
