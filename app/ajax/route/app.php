@@ -36,7 +36,7 @@ Route::get('newsDetail/[:id]', 'News/detail');
 Route::get('news/[:page]', 'News/index');
 //学院
 Route::get('courseHot', 'Course/hot');
-
-
 //客户案例
 Route::get('caseList', 'CaseController/list');
+Route::get('case', 'CaseController/index');
+Route::get('caseDetail/:case_id', 'CaseController/detail');

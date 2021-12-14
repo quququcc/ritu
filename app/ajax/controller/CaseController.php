@@ -8,6 +8,8 @@
 
 namespace app\ajax\controller;
 
+use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteCaseCate;
 use app\admin\model\SiteCaseDetail;
 use app\admin\model\SiteCaseProducts;
 use app\Request;
@@ -28,43 +30,100 @@ class CaseController
 
     public function list(Request $request)
     {
-        $products = $request->param('products','2,3');//1,2,3...
-        $cates = $request->param('cates','5');//1,2,3...
-        $page = $request->param('page',1);
-        $limit = $request->param('limit',40);
-
+        $products = $request->param('products', '2,3');//1,2,3...
+        $cates = $request->param('cates', '5');//1,2,3...
+        $page = $request->param('page', 1);
+        $limit = $request->param('limit', 40);
 
         $sql = "select id,company_name_s,company_image from ea_site_case_detail";
 
-        if(!empty($products)){
+        if (!empty($products)) {
             $sql .= " where (";
-            foreach (explode(',',$products) as $k=>$v){
-                if($k==0){
-                    $sql .= "products like '%".$v."%'";
-                }else{
-                    $sql .= " or products like '%".$v."%'";
+            foreach (explode(',', $products) as $k => $v) {
+                if ($k == 0) {
+                    $sql .= "products like '%" . $v . "%'";
+                } else {
+                    $sql .= " or products like '%" . $v . "%'";
                 }
             }
             $sql .= ")";
         }
 
-        if(!empty($cates)){
-            if(!empty($products)){
+        if (!empty($cates)) {
+            if (!empty($products)) {
                 $sql .= " AND (";
-            }else{
+            } else {
                 $sql .= "where (";
             }
-            foreach (explode(',',$cates) as $k=>$v){
-                if($k==0){
-                    $sql .= "cates like '%".$v."%'";
-                }else{
-                    $sql .= " or cates like '%".$v."%'";
+            foreach (explode(',', $cates) as $k => $v) {
+                if ($k == 0) {
+                    $sql .= "cates like '%" . $v . "%'";
+                } else {
+                    $sql .= " or cates like '%" . $v . "%'";
                 }
             }
             $sql .= ")";
         }
-        $sql .= " limit ".($page-1)*$limit.",".$limit;
+        $sql .= " limit " . ($page - 1) * $limit . "," . $limit;
         $data = $this->caseModel->query($sql);
         return json_encode($data);
+    }
+
+    public function index()
+    {
+        //banner数据
+        $banner = (new SiteBannerInside())
+            ->field('title,title_color,title_s1,title_s1_color,title_s1,title_s1_color,background')
+            ->where('id', 5)->find();
+
+        //案例分类
+        $products = (new SiteCaseProducts())->withoutField('sort')->order('sort')->select();
+        $cates = (new SiteCaseCate())->withoutField('sort')->order('sort')->select();
+
+        //行业解决方案
+        $hotCase = $this->caseModel
+            ->field('id,company_name_s,company_image,industry,title,image,descript')
+            ->order('publish_time')->limit(3)->select();
+
+        return json_encode([
+            'banner' => $banner,
+            'products' => $products,
+            'cates' => $cates,
+            'hotCase' => $hotCase
+        ]);
+    }
+
+    public function detail($case_id)
+    {
+        $caseDetail = $this->caseModel->withoutField('cates,image')->where('id', $case_id)->find();
+
+        if (!empty($caseDetail)) {
+            //banner数据
+            $banner = (new SiteBannerInside())
+                ->field('title,title_color,title_s1,title_s1_color,title_s1,title_s1_color,background')
+                ->where('id', 5)->find();
+
+            //获取使用的产品
+            $products = (new SiteCaseProducts())
+                ->whereIn('id', explode(',', $caseDetail['products']))
+                ->order('sort')->column('products_name', 'id');
+
+            //成功案例
+            $successCase = $this->caseModel
+                ->field('id,company_name_s,company_image,industry,title,image,descript')
+                ->where('id', '<>', $case_id)
+                ->order('publish_time')->limit(3)->select();
+
+            $caseDetail['products'] = $products;
+            $caseDetail['publish_time'] = date('Y-m-d', strtotime($caseDetail['publish_time']));
+            return json_encode([
+                'banner' => $banner,
+                'detail' => $caseDetail,
+                'successCase' => $successCase,
+            ]);
+
+        } else {
+            return json_encode([]);
+        }
     }
 }

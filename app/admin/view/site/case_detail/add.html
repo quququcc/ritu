@@ -68,6 +68,22 @@
             </div>
         </div>
         <div class="layui-form-item">
+            <label class="layui-form-label required">展示图</label>
+            <div class="layui-input-block layuimini-upload">
+                <input name="image" class="layui-input layui-col-xs6" lay-verify="required" value="">
+                <div class="layuimini-upload-btn">
+                    <span><a class="layui-btn" data-upload="image" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                    <span><a class="layui-btn layui-btn-normal" id="select_image" data-upload-select="image" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">案例简介</label>
+            <div class="layui-input-block">
+                <textarea type="text" name="descript" class="layui-textarea" lay-verify="required" placeholder="请输入案例简介"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
             <label class="layui-form-label">案例内容</label>
             <div class="layui-input-block">
                 <textarea name="content" rows="20" class="layui-textarea editor" 案例内容 placeholder="请输入案例内容"></textarea>
