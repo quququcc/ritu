@@ -3,14 +3,15 @@ const index = {
         let swiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
             loop: true,
+            autoplay : true,
             loopAdditionalSlides: 100,
             // navigation: {
             //     nextEl: '.swiper-button-next',
             //     prevEl: '.swiper-button-prev',
             // },
-            // pagination: {
-            //     el:'.swiper-pagination'
-            // }
+            pagination: {
+                el:'.swiper-pagination'
+            }
         })
     },
     industryTab: () =>{

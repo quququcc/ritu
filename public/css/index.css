@@ -204,6 +204,15 @@
     background: #fff;
 }
 
+.solution-box img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+
+
 .section-even {
     background: #F2F2F2;
     position: relative;
@@ -224,7 +233,13 @@
     border-radius: 36px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
+.service-box-img{
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    text-align: center;
+}
 .service-title {
     text-align: center;
     position: relative;
@@ -234,7 +249,7 @@
 }
 
 .service-title span {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     color: #333333;
     position: absolute;
@@ -287,6 +302,9 @@
 .service-box:hover .service-title a {
     display: inline-block;
     text-align: center;
+}
+.service-box:hover .service-box-img{
+    background: #2555FF;
 }
 
 .service-medals {
@@ -372,10 +390,18 @@
     height: 260px;
     overflow: hidden;
     border-radius: 30px;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .industry-box .industry-img img {
     transition: all ease .5s;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
 }
 
 .industry-container {
@@ -391,6 +417,8 @@
     position: relative;
     margin-top: 40px;
     margin-bottom: 20px;
+    height: 22px;
+    overflow: hidden;
 }
 
 .industry-title span {
@@ -425,9 +453,10 @@
     background: #233876;
     transition: all ease-in-out .6s;
 }
-
+.industry-box:hover .industry-img{
+    background: #2555FF;
+}
 .industry-box:hover .industry-img img {
-    transform: scale(1.08);
 }
 
 .industry-box:hover {

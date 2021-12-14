@@ -1,8 +1,8 @@
 /* banner */
 .dw-banner {
     width: 100%;
-    height: 606px;
-    background: #E7EEFE;
+    /* height: 606px;
+    background: #E7EEFE; */
     position: relative;
 }
 
@@ -260,26 +260,24 @@
     position: relative;
     width: 100%;
 }
-
-.add-ads span {
+.add-ads span{
     display: block;
 }
-
-.add-ads span:first-child {
+.add-ads>span:first-child {
     font-size: 36px;
     font-weight: 800;
     color: #FFFFFF;
     margin-bottom: 30px;
 }
 
-.add-ads span:nth-child(2) {
+.add-ads>span:nth-child(2) {
     font-size: 20px;
     font-weight: 500;
     color: #FFFFFF;
 }
 
 .add-ads a {
-    position: absolute;
+    /* position: absolute;
     right: 120px;
     width: 160px;
     height: 40px;
@@ -287,8 +285,8 @@
     text-align: center;
     background: #FFFFFF;
     border-radius: 20px;
-    color: #333;
-    top: 30px;
+    color:#333;
+    top:30px; */
 }
 
 .section-cate-title {
