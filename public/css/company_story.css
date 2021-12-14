@@ -1,0 +1,375 @@
+/* banner */
+.dw-banner {
+    width: 100%;
+    height: 606px;
+    background: #E7EEFE;
+    position: relative;
+}
+
+.banner-inner-txt {
+    position: absolute;
+    width: 1200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-inner-txt h3 {
+    font-size: 52px;
+    font-weight: 400;
+    color: #222;
+}
+
+.banner-inner-txt a {
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    height: 40px;
+    background: #2555FF;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 40px;
+    margin-top: 60px;
+}
+
+/* banner */
+/* section */
+.section-w1200 {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.section-left {
+    width: 262px;
+}
+
+.section-left-menu {}
+
+.menu-desc {
+    width: 100%;
+    padding: 20px 15px;
+    background: #2555FF;
+
+}
+
+.menu-desc span:first-child {
+    margin-bottom: 30px;
+}
+
+.menu-desc span:first-child::after {
+    content: "";
+    width: 48px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    bottom: -16px;
+    z-index: 10;
+    left: 0;
+}
+
+.menu-desc span {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.menu-list {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-list ul li {
+    width: 100%;
+    height: 68px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    line-height: 68px;
+    padding: 0 16px;
+    position: relative;
+}
+
+.menu-list ul li a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.menu-list ul li::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #999999;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-list ul li.cur a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2555FF;
+}
+
+.you_want {
+    position: relative;
+    margin-top: 25px;
+}
+
+.you_want span {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFFFFF;
+    height: 49px;
+    line-height: 49px;
+    padding-left: 15px;
+    background: #2555FF;
+    overflow: hidden;
+}
+
+.you_want ul {
+    width: 100%;
+}
+
+.you_want ul li {
+    height: 71px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    overflow: hidden;
+    padding: 10px 30px;
+    position: relative;
+    display: flex;
+}
+
+.you_want ul li em {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #2555FF;
+    border-radius: 50%;
+    margin-top: 8px;
+    /* position: absolute;
+    left: 20px;
+    top:20%; */
+    /* transform: translateY(-50%); */
+}
+
+.you_want ul li a {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    margin-left: 10px;
+}
+
+.section-right {
+    flex: 1;
+
+}
+
+.right-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 30px 0;
+}
+
+.file-box {
+    flex: 0 0 31%;
+    height: 300px;
+    background: #FFFFFF;
+    transition: all ease-in-out .6s;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+    margin-bottom: 40px;
+}
+
+.file-box img {
+    width: 100%;
+    height: 174px;
+}
+
+.file-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    margin: 15px 10px 45px;
+    transition: all ease-in-out .5s;
+}
+
+.file-box a {
+    display: block;
+    margin: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #DADADA;
+    color: #555;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.file-box:hover {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 8%);
+}
+
+.file-box:hover .file-title {
+    color: #2555FF;
+}
+
+.file-box:hover a {
+    background: #2555FF;
+    color: #fff;
+}
+
+
+.history-box {
+    position: inherit;
+    display: flex;
+    transition: all .36s ease;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.history-img {
+    width: 336px;
+    height: 202px;
+    position: relative;
+    overflow: hidden;
+}
+
+.history-img img {
+    width: 336px;
+    height: 202px;
+    transition: all ease-in-out .5s;
+}
+
+.history-content {
+    width: 495px;
+    margin-left: 15px;
+}
+
+.history-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    height: 47px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 18px;
+
+}
+
+.history-desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.history-date {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-box:hover {
+    padding-left: 20px;
+    box-shadow: 0 8px 35px rgb(0 0 0 / 8%);
+}
+
+.history-box:hover .history-title {
+    color: #2555FF
+}
+
+.history-box:hover img {
+    transform: scale(1.1);
+}
+
+.section-focus {
+    position: relative;
+    background: url(../imgs/focus_icon.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.section-margin {
+    position: relative;
+    width: 1200px;
+    margin: 75px auto 90px;
+}
+
+.operate-route {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.operate-box img, .operate-box span {
+    display: block;
+}
+
+.focus-title {
+   
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.focus-title span{
+    font-size: 30px;
+    font-weight: 400;
+    color: #333333;
+    position: relative;
+}
+.focus-title span::before{
+    content:'';
+    width: 33px;
+    height: 4px;
+    background: #2555FF;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    left: -45px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.focus-title span::after{
+    content:'';
+    width: 33px;
+    height: 4px;
+    background: #2555FF;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    right: -45px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.operate-box span {
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+/* section */

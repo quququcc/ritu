@@ -38,3 +38,5 @@ Route::get('news/[:page]', 'News/index');
 Route::get('courseHot', 'Course/hot');
 
 
+//客户案例
+Route::get('caseList', 'CaseController/list');
