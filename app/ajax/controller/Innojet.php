@@ -39,15 +39,23 @@ class Innojet
         ];
 
         //模块2
+        $model2_data = (new SiteInnojetContent2())->field('title,text,image')->order('sort')->select();
+        foreach ($model2_data as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model2'] = [
             'title' => (new SiteInnojetContent2Title())->field('title,title_s,image')->where('id', 1)->find(),
-            'data' => (new SiteInnojetContent2())->field('title,text,image')->order('sort')->select(),
+            'data' => $model2_data,
         ];
 
         //模块3
+        $model3_data = (new SiteInnojetContent3())->field('title,text,image_def,image_act')->order('sort')->select();
+        foreach ($model3_data as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model3'] = [
             'title' => (new SiteInnojetContent3Title())->field('title,title_s')->where('id', 1)->find(),
-            'data' => (new SiteInnojetContent3())->field('title,text,image_def,image_act')->order('sort')->select(),
+            'data' => $model3_data,
         ];
 
         //模块4

@@ -38,8 +38,11 @@ class About
         //发展历程
         $data['course'] = (new SiteAboutCourse())->withoutField('id')->where('id',1)->find();
 
-        //发展历程
-        $data['honor'] = (new SiteAboutHonor())->withoutField('id')->where('id',1)->find();
+        //荣誉资质
+        $honor = (new SiteAboutHonor())->withoutField('id')->where('id',1)->find();
+        $honor['text1'] = explode("\n",$honor['text1']);
+        $honor['text2'] = explode("\n",$honor['text2']);
+        $data['honor'] = $honor;
 
         //联系我们
         $data['contact'] = (new SiteAboutContact())->withoutField('id,sort')->order('sort')->select();

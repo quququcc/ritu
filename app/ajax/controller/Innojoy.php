@@ -36,6 +36,9 @@ class Innojoy
 
         //模块2
         $model2 = (new SiteInnojoyContent2())->order('id')->select()->toArray();
+        foreach ($model2 as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model2'] = [
             'data1' => $model2[0],
             'data2' => $model2[1],

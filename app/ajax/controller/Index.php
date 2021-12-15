@@ -39,9 +39,13 @@ class Index
         ];
 
         //模块2
+        $model2_data = (new SiteIndexContent2())->field('title,text,image')->order('sort')->select();
+        foreach ($model2_data as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model2'] = [
             'title' => (new SiteIndexContent2Title())->where('id', 1)->value('title'),
-            'data' => (new SiteIndexContent2())->field('title,text,image')->order('sort')->select(),
+            'data' => $model2_data,
             'bottom' => (new SiteIndexContent2Bottom())->field('title,image')->order('sort')->select(),
         ];
 

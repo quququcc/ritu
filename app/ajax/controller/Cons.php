@@ -53,9 +53,13 @@ class Cons
         ];
 
         //模块3
+        $model3_data = (new SiteProfService())->field('title,text')->order('sort')->select();
+        foreach ($model3_data as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model3'] = [
             'title' => (new SiteProfServiceTitle())->where('id', 1)->value('title'),
-            'data' => (new SiteProfService())->field('title,text')->order('sort')->select(),
+            'data' => $model3_data,
         ];
 
         //模块4
