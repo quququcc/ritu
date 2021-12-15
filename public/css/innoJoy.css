@@ -241,7 +241,18 @@
 
 .about-right>img, .about-left>img {
     width: 600px;
-    height: 480px;
+    height: auto;
+    transition: all ease-in-out .4s;
+}
+.about-right>img:hover, .about-left>img:hover {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.about-right>img{
+    margin-left: 20px;
+}
+.about-left>img{
+    margin-right: 20px;
 }
 
 .about-right p {
@@ -436,7 +447,7 @@
     display: block;
     font-size: 36px;
     font-weight: 800;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .world-ads>a {
@@ -446,8 +457,15 @@
     margin-top: 60px;
     height: 40px;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 8px;
     line-height: 40px;
     text-align: center;
+    overflow: hidden;
+    border:1px solid #fff;
+}
+
+.world-ads>a>span{
+    position: relative;
+    z-index: 1;
 }
 /* section */

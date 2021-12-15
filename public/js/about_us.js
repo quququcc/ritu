@@ -15,10 +15,15 @@ const about_us = {
             $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
             if ($target.length) {
                 let targetOffset = $target.offset().top;
-                $('html,body').animate({
-                    scrollTop: targetOffset + that.maoNumber
-                },
-                    700);
+                if($(".read-mbx-nav").hasClass("mbx-nav-fixed")) {
+                    $('html,body').animate({
+                        scrollTop: targetOffset + that.maoNumber
+                    },700);
+                }else{
+                    $('html,body').animate({
+                        scrollTop: targetOffset + that.maoNumber - 75
+                    },700);
+                }
                 return false;
             }
         });

@@ -1,6 +1,7 @@
 /* banner */
 .dw-banner {
     width: 100%;
+    overflow: hidden;
     
     position: relative;
 }
@@ -312,11 +313,11 @@
 }
 
 .dev-box:nth-child(2) .dev-title {
-    background: -webkit-linear-gradient(left top, #a080ff, #5077ff);
+    /* background: -webkit-linear-gradient(left top, #a080ff, #5077ff); */
 }
 
 .dev-box:nth-child(3) .dev-title {
-    background: -webkit-linear-gradient(left top, #11bbdf, #4f77ff);
+    /* background: -webkit-linear-gradient(left top, #11bbdf, #4f77ff); */
 }
 
 .dev-content {

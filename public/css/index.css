@@ -164,7 +164,7 @@
     width: 160px;
     height: 40px;
     background: #2555FF;
-    border-radius: 20px;
+    border-radius: 8px;
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -180,7 +180,7 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all ease-in-out .5s;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 .solution-box:hover{
     box-shadow: 0px 15px 25px 0px rgba(53, 100, 230, 0.15);
@@ -209,7 +209,7 @@
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 10;
+    z-index: 1;
 }
 
 
@@ -263,7 +263,7 @@
     width: 160px;
     height: 38px;
     background: #2555FF;
-    border-radius: 19px;
+    border-radius: 8px;
     color: #fff;
     display: none;
     line-height: 38px;
@@ -297,10 +297,10 @@
     
 }
 .service-box:hover .service-title span{
-    left: 30%;
+    /* left: 30%; */
 }
 .service-box:hover .service-title a {
-    display: inline-block;
+    display: none;
     text-align: center;
 }
 .service-box:hover .service-box-img{

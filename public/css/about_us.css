@@ -1,7 +1,7 @@
 /* banner */
 .dw-banner {
     width: 100%;
-    
+    overflow: hidden;
     position: relative;
 }
 

@@ -1,6 +1,7 @@
 /* banner */
 .dw-banner {
     width: 100%;
+    overflow: hidden;
     
     position: relative;
 }
@@ -411,6 +412,16 @@
     line-height: 40px;
     color: #fff;
     text-align: center;
+}
+.manage-main-img {
+    text-align: center;
+    position: relative;
+    width: 680px;
+}
+.manage-main-img img{
+    display: inline-block;
+    width: 680px;
+    height: auto;
 }
 
 .flow-container {

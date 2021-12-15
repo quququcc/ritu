@@ -460,7 +460,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     border-radius: 8px;
     margin-right: 40px;
     background: #fff;
-    border: 1px solid #2555FF;
+    /* border: 1px solid #2555FF; */
     color: #2555FF;
     cursor: pointer;
 }
@@ -497,7 +497,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 .btn-cur {
     position: relative;
     transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-
+    border:1px solid #fff;
 }
 
 .btn-cur::after {
@@ -508,6 +508,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     background: #2555FF;
     transition: all ease-in-out .6s;
     top: 0;
+    border-radius: 8px;
     left: 0;
 }
 
