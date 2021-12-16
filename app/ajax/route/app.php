@@ -23,20 +23,30 @@ Route::get('cons', 'Cons/index');
 //关于我们
 Route::get('about', 'About/index');
 //招聘岗位分类
-Route::get('jobCate', 'Job/cate');
-Route::get('jobList/[:cate_id]/[:page]', 'Job/index');
-//资源中心
-Route::get('resource', 'Resource/index');
+Route::get('jobList', 'Job/index');
 //白皮书
-Route::get('book/[:page]', 'Book/index');
+Route::get('book', 'Book/index');
+Route::get('bookList', 'Book/list');
+//获取最新一条白皮书信息（站点顶部）
+Route::get('bookTop', 'Book/top');
+
 //榜单
-Route::get('top/[:page]', 'Top/index');
+Route::get('top', 'Top/index');
+Route::get('topList', 'Top/list');
 //动态
-Route::get('newsDetail/[:id]', 'News/detail');
-Route::get('news/[:page]', 'News/index');
+Route::get('newsDetail', 'News/detail');
+Route::get('newsList', 'News/list');
+Route::get('news', 'News/index');
 //学院
-Route::get('courseHot', 'Course/hot');
+Route::get('course', 'Course/index');
+Route::get('courseList', 'Course/List');
+Route::get('courseHistory', 'Course/history');
+Route::get('courseDetail', 'Course/detail');
 //客户案例
 Route::get('caseList', 'CaseController/list');
 Route::get('case', 'CaseController/index');
-Route::get('caseDetail/:case_id', 'CaseController/detail');
+Route::get('caseDetail', 'CaseController/detail');
+
+//友情链接
+Route::get('config/link', 'Config/link');
+

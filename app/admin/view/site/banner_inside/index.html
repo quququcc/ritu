@@ -8,8 +8,11 @@
                 <li>innojet商标管理</li>
                 <li>咨询服务</li>
                 <li>客户案例</li>
-                <li>资源中心</li>
                 <li>关于我们</li>
+                <li>行业干货</li>
+                <li>榜单</li>
+                <li>为知塾学院</li>
+                <li>公司动态</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
@@ -299,52 +302,6 @@
                 </div>
 
                 <div class="layui-tab-item">
-                    <form id="app-form6" class="layui-form layuimini-form">
-                        <input type="text" name="id" class="layui-input layui-hide" value="{$data.5.id}">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">标题</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$data.5.title|default=''}">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">标题色号</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="title_color" class="layui-input"  placeholder="例：#636363" value="{$data.5.title_color|default=''}">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">副标题1</label>
-                            <div class="layui-input-block">
-                                <textarea type="text" name="title_s1" class="layui-textarea" placeholder="请输入副标题">{$data.5.title_s1|default=''}</textarea>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">副标题1 色号</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="title_s1_color" class="layui-input"  placeholder="例：#636363" value="{$data.5.title_s1_color|default=''}">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label required">Banner图</label>
-                            <div class="layui-input-block layuimini-upload">
-                                <input name="background6" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$data.5.background|default=''}">
-                                <div class="layuimini-upload-btn">
-                                    <span><a class="layui-btn" data-upload="background6" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
-                                    <span><a class="layui-btn layui-btn-normal" id="select_background6" data-upload-select="background6" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hr-line"></div>
-                        <div class="layui-form-item text-center">
-                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.bannerInside/save" data-refresh="false">确认</button>
-                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="layui-tab-item">
                     <form id="app-form7" class="layui-form layuimini-form">
                         <input type="text" name="id" class="layui-input layui-hide" value="{$data.6.id}">
                         <div class="layui-form-item">
@@ -401,6 +358,191 @@
 
                     </form>
                 </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form6" class="layui-form layuimini-form">
+                        <input type="text" name="id" class="layui-input layui-hide" value="{$data.5.id}">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$data.5.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_color" class="layui-input"  placeholder="例：#636363" value="{$data.5.title_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="title_s1" class="layui-textarea" placeholder="请输入副标题">{$data.5.title_s1|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1 色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_s1_color" class="layui-input"  placeholder="例：#636363" value="{$data.5.title_s1_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">Banner图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background6" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$data.5.background|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background6" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background6" data-upload-select="background6" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.bannerInside/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form8" class="layui-form layuimini-form">
+                        <input type="text" name="id" class="layui-input layui-hide" value="{$data.7.id}">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$data.7.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_color" class="layui-input"  placeholder="例：#636363" value="{$data.7.title_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="title_s1" class="layui-textarea" placeholder="请输入副标题">{$data.7.title_s1|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1 色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_s1_color" class="layui-input"  placeholder="例：#636363" value="{$data.7.title_s1_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">Banner图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background8" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$data.7.background|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background8" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background8" data-upload-select="background8" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.bannerInside/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form9" class="layui-form layuimini-form">
+                        <input type="text" name="id" class="layui-input layui-hide" value="{$data.8.id}">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$data.8.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_color" class="layui-input"  placeholder="例：#636363" value="{$data.8.title_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="title_s1" class="layui-textarea" placeholder="请输入副标题">{$data.8.title_s1|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1 色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_s1_color" class="layui-input"  placeholder="例：#636363" value="{$data.8.title_s1_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">Banner图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background9" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$data.8.background|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background9" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background9" data-upload-select="background9" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.bannerInside/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form10" class="layui-form layuimini-form">
+                        <input type="text" name="id" class="layui-input layui-hide" value="{$data.9.id}">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input"  placeholder="请输入标题" value="{$data.9.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_color" class="layui-input"  placeholder="例：#636363" value="{$data.9.title_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="title_s1" class="layui-textarea" placeholder="请输入副标题">{$data.9.title_s1|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">副标题1 色号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title_s1_color" class="layui-input"  placeholder="例：#636363" value="{$data.9.title_s1_color|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">Banner图</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="background10" class="layui-input layui-col-xs6"   placeholder="请上传Banner图" value="{$data.9.background|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="background10" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_background10" data-upload-select="background10" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.bannerInside/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
             </div>
         </div>
 

@@ -93,8 +93,13 @@ class CaseController
         ]);
     }
 
-    public function detail($case_id)
+    public function detail(Request $request)
     {
+        $case_id = $request->param('case_id',0);
+        if($case_id==0){
+            return "参数错误";
+        }
+
         $caseDetail = $this->caseModel->withoutField('cates,image')->where('id', $case_id)->find();
 
         if (!empty($caseDetail)) {

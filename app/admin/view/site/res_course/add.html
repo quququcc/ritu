@@ -19,6 +19,12 @@
             </div>
         </div>
         <div class="layui-form-item">
+            <label class="layui-form-label">表单链接</label>
+            <div class="layui-input-block">
+                <input type="text" name="form_link" class="layui-input" lay-verify="required" placeholder="请输入表单链接" value="">
+            </div>
+        </div>
+        <div class="layui-form-item">
             <label class="layui-form-label required">封面</label>
             <div class="layui-input-block layuimini-upload">
                 <input name="image" class="layui-input layui-col-xs6" lay-verify="required"  placeholder="请上传封面" value="">
@@ -29,9 +35,13 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">表单链接</label>
-            <div class="layui-input-block">
-                <input type="text" name="form_link" class="layui-input" lay-verify="required" placeholder="请输入表单链接" value="">
+            <label class="layui-form-label required">详情页图片</label>
+            <div class="layui-input-block layuimini-upload">
+                <input name="image_detail" class="layui-input layui-col-xs6" lay-verify="required" value="">
+                <div class="layuimini-upload-btn">
+                    <span><a class="layui-btn" data-upload="image_detail" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                    <span><a class="layui-btn layui-btn-normal" id="select_image_detail" data-upload-select="image_detail" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                </div>
             </div>
         </div>
         <div class="layui-form-item layui-form-text">
