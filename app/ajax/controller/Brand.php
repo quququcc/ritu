@@ -43,15 +43,23 @@ class Brand
         ];
 
         //模块2
+        $model2 = (new SiteBrandContent2())->field('title,text,image')->order('sort')->select();
+        foreach ($model2 as &$v){
+            $v['text'] = explode("\n",$v['text']);
+        }
         $data['model2'] = [
             'title' => (new SiteBrandContent2Title())->field('title,title_s,image')->where('id', 1)->find(),
-            'data' => (new SiteBrandContent2())->field('title,text,image')->order('sort')->select(),
+            'data' => $model2,
         ];
 
         //模块3
+        $model3_content = (new SiteBrandDemand())->field('title,text,images')->order('sort')->select();
+        foreach ($model3_content as &$v){
+            $v['images'] = explode("|",$v['images']);
+        }
         $data['model3'] = [
             'title' => (new SiteBrandDemandTitle())->where('id', 1)->value('title'),
-            'data' => (new SiteBrandDemand())->field('title,text,image')->order('sort')->select(),
+            'data' => $model3_content,
         ];
 
         //模块4

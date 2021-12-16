@@ -21,7 +21,6 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     // {field: 'id', title: 'id'},
                     {field: 'title', title: '标题'},
                     {field: 'text', title: '内容项'},
-                    {field: 'image', title: '图片', templet: ea.table.image},
                     {field: 'sort', title: '排序', edit: 'text'},
                     {width: 250, title: '操作', templet: ea.table.tool},
                 ]],

@@ -47,7 +47,7 @@ class Innojoy
         ];
 
         //模块3
-        $model3 = (new SiteInnojoyContent3())->field('title,image,tag')->order('sort')->select();
+        $model3 = (new SiteInnojoyContent3())->field('title,image,tag,text')->order('sort')->select();
         $model3Content[0]['title'] = '高质量数据';
         $model3Content[0]['data'] = [];
         $model3Content[1]['title'] = '多类型专利数据';

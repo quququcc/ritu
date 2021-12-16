@@ -39,7 +39,7 @@ class Cons
         //模块2
         $model2 = (new SiteConsServiceContent())
             ->alias('data')
-            ->field('data.title,data.text,data.cat_id,cate.title')
+            ->field('data.title,data.text,data.cat_id,image,cate.title')
             ->leftJoin('ea_site_cons_service_title cate', 'data.cat_id = cate.id')
             ->order('cate.sort')->select();
         $model2Content = [];
