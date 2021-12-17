@@ -36,7 +36,7 @@ class About
         $data['culture'] = (new SiteAboutCulture())->withoutField('id')->order('sort')->select();
 
         //发展历程
-        $data['course'] = (new SiteAboutCourse())->withoutField('id')->order('year')->select();
+        $data['course'] = (new SiteAboutCourse())->withoutField('id')->order('year','desc')->select();
 
         //荣誉资质
         $honor = (new SiteAboutHonor())->withoutField('id')->where('id',1)->find();
