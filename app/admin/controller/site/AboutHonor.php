@@ -44,7 +44,7 @@ class AboutHonor extends AdminController
             $update = [
                 'text1'=>$post['text1'],
                 'text2'=>$post['text2'] ?? '',
-                'image'=>$post['image'] ?? '',
+                'images'=>$post['images'] ?? '',
             ];
             $this->model->where('id',1)->update($update);
         } catch (\Exception $e) {

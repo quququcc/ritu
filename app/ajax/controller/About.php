@@ -42,6 +42,7 @@ class About
         $honor = (new SiteAboutHonor())->withoutField('id')->where('id',1)->find();
         $honor['text1'] = explode("\n",$honor['text1']);
         $honor['text2'] = explode("\n",$honor['text2']);
+        $honor['images'] = explode("|",$honor['images']);
         $data['honor'] = $honor;
 
         //联系我们
