@@ -33,10 +33,10 @@ class About
         $data['term'] = (new SiteAboutTeam())->withoutField('id')->where('id',1)->find();
 
         //企业文化
-        $data['culture'] = (new SiteAboutCulture())->withoutField('id')->where('id',1)->select();
+        $data['culture'] = (new SiteAboutCulture())->withoutField('id')->order('sort')->select();
 
         //发展历程
-        $data['course'] = (new SiteAboutCourse())->withoutField('id')->where('id',1)->select();
+        $data['course'] = (new SiteAboutCourse())->withoutField('id')->order('year')->select();
 
         //荣誉资质
         $honor = (new SiteAboutHonor())->withoutField('id')->where('id',1)->find();

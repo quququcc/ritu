@@ -116,7 +116,7 @@ class CaseController
             //成功案例
             $successCase = $this->caseModel
                 ->field('id,company_name_s,company_image,industry,title,image,descript')
-                ->where('id', '<>', $case_id)
+//                ->where('id', '<>', $case_id)
                 ->order('publish_time')->limit(3)->select();
 
             $caseDetail['products'] = $products;

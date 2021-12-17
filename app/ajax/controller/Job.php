@@ -30,7 +30,7 @@ class Job
 
         $cate = (new SiteAboutJobCate())->select();
         foreach ($cate as &$v) {
-            if ($v['id'] = $cate_id) {
+            if ($v['id'] == $cate_id) {
                 $v['is_active'] = 1;
             } else {
                 $v['is_active'] = 0;
