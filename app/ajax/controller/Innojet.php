@@ -22,6 +22,10 @@ use app\admin\model\SiteInnojetContent5;
 use app\admin\model\SiteInnojetContent5Title;
 use app\admin\model\SiteInnojetContent6;
 use app\admin\model\SiteInnojetContent6Title;
+use app\admin\model\SiteInnojetContent7;
+use app\admin\model\SiteInnojetContent7Title;
+use app\admin\model\SiteInnojetContent8;
+use app\admin\model\SiteInnojetContent8Title;
 
 class Innojet
 {
@@ -74,6 +78,18 @@ class Innojet
         $data['model6'] = [
             'title' => (new SiteInnojetContent6Title())->where('id', 1)->value('title'),
             'data' => (new SiteInnojetContent6())->field('image')->order('sort')->select(),
+        ];
+
+        //模块7
+        $data['model7'] = [
+            'title' => (new SiteInnojetContent7Title())->where('id', 1)->value('title'),
+            'data' => (new SiteInnojetContent7())->field('title,text')->order('sort')->select(),
+        ];
+
+        //模块8
+        $data['model8'] = [
+            'title' => (new SiteInnojetContent8Title())->where('id', 1)->value('title'),
+            'data' => (new SiteInnojetContent8())->field('title,text,icon,image')->order('sort')->select(),
         ];
 
         return json_encode($data);
