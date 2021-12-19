@@ -71,7 +71,7 @@ class Brand
 
         //模块5
         $data['model5'] = [
-            'title' => (new SiteBrandConfigTitle())->field('title,title_s')->where('id', 1)->select(),
+            'title' => (new SiteBrandConfigTitle())->field('title,title_s')->where('id', 1)->find(),
             'data' => (new SiteBrandConfig())->field('image,text')->order('sort')->select(),
         ];
 
