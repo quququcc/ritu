@@ -89,7 +89,7 @@ class Brand
 
         //模块8
         $data['model8'] = [
-            'title' => (new SiteBrandContent8Title())->where('id', 1)->value('title'),
+            'title' => (new SiteBrandContent8Title())->field('title,title_s')->where('id', 1)->find(),
             'data' => (new SiteBrandContent8())->field('title,text,icon,image')->order('sort')->select(),
         ];
 
