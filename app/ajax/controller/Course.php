@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteResCourse;
 use app\admin\model\SiteResCourseCate;
 use app\admin\model\SiteResCourseLecturer;
@@ -27,6 +28,8 @@ class Course
 
 
         $data['hot'] = (new SiteResCourse())->field('id,title,image')->order('view_num')->limit(3)->select();
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','res_course')->find();
         return json_encode($data);
     }
 

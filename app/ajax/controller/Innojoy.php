@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteInnojoyContent1;
 use app\admin\model\SiteInnojoyContent1Title;
 use app\admin\model\SiteInnojoyContent2;
@@ -71,6 +72,8 @@ class Innojoy
             'title' => (new SiteInnojoyContent5Title())->where('id', 1)->value('title'),
             'data' => (new SiteInnojoyContent5())->field('image')->order('sort')->select(),
         ];
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','innojoy')->find();
 
         return json_encode($data);
     }

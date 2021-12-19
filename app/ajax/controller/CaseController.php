@@ -12,6 +12,7 @@ use app\admin\model\SiteBannerInside;
 use app\admin\model\SiteCaseCate;
 use app\admin\model\SiteCaseDetail;
 use app\admin\model\SiteCaseProducts;
+use app\admin\model\SiteConfigBottom1;
 use app\Request;
 
 /**
@@ -85,11 +86,14 @@ class CaseController
             ->field('id,company_name_s,company_image,industry,title,image,descript')
             ->order('publish_time')->limit(3)->select();
 
+        $bottom = (new SiteConfigBottom1())->where('sign','case')->find();
+
         return json_encode([
             'banner' => $banner,
             'products' => $products,
             'cates' => $cates,
-            'hotCase' => $hotCase
+            'hotCase' => $hotCase,
+            'bottom' => $bottom,
         ]);
     }
 

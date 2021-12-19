@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteInnojetContent1;
 use app\admin\model\SiteInnojetContent1Title;
 use app\admin\model\SiteInnojetContent2;
@@ -91,6 +92,8 @@ class Innojet
             'title' => (new SiteInnojetContent8Title())->where('id', 1)->value('title'),
             'data' => (new SiteInnojetContent8())->field('title,text,icon,image')->order('sort')->select(),
         ];
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','innojet_patent')->find();
 
         return json_encode($data);
     }

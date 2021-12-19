@@ -26,6 +26,7 @@ use app\admin\model\SiteBrandPoint;
 use app\admin\model\SiteBrandPointTitle;
 use app\admin\model\SiteBrandScheme;
 use app\admin\model\SiteBrandSchemeTitle;
+use app\admin\model\SiteConfigBottom1;
 
 class Brand
 {
@@ -92,6 +93,8 @@ class Brand
             'title' => (new SiteBrandContent8Title())->field('title,title_s')->where('id', 1)->find(),
             'data' => (new SiteBrandContent8())->field('title,text,icon,image')->order('sort')->select(),
         ];
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','innojet_brand')->find();
 
         return json_encode($data);
     }

@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteConsContent4;
 use app\admin\model\SiteConsContent4Title;
 use app\admin\model\SiteConsContent5;
@@ -74,6 +75,8 @@ class Cons
             'title' => (new SiteConsContent5Title())->where('id', 1)->value('title'),
             'data' => (new SiteConsContent5())->field('image')->order('sort')->select(),
         ];
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','consult')->find();
 
 
 

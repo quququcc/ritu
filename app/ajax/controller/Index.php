@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBanner;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteIndexContent1;
 use app\admin\model\SiteIndexContent1Title;
 use app\admin\model\SiteIndexContent2;
@@ -62,6 +63,8 @@ class Index
             'course' => (new SiteResCourse())->field('id,title,image,descript')->order('id')->limit(3)->select(),
             'news' => (new SiteResNews())->field('id,title,descript')->order('id')->limit(3)->select(),
         ];
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','index')->find();
 
         return json_encode($data);
     }

@@ -16,6 +16,7 @@ use app\admin\model\SiteAboutHonor;
 use app\admin\model\SiteAboutTeam;
 use app\admin\model\SiteAboutUs;
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 
 class About
 {
@@ -47,6 +48,8 @@ class About
 
         //联系我们
         $data['contact'] = (new SiteAboutContact())->withoutField('id,sort')->order('sort')->select();
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','about')->find();
 
         return json_encode($data);
     }

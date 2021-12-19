@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteResBook;
 use app\admin\model\SiteResNews;
 use app\Request;
@@ -30,6 +31,8 @@ class Book
             ->order('view_num')
             ->limit(6)->select();
         $data['recommend'] = $recommend;
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','res_book')->find();
 
         return json_encode($data);
     }

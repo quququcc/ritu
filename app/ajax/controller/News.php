@@ -10,6 +10,7 @@ namespace app\ajax\controller;
 
 
 use app\admin\model\SiteBannerInside;
+use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteResNews;
 use app\Request;
 
@@ -21,6 +22,8 @@ class News
         $data['banner'] = (new SiteBannerInside())
             ->field('title,title_color,title_s1,title_s1_color,background')
             ->where('id', 10)->find();
+
+        $data['bottom'] = (new SiteConfigBottom1())->where('sign','res_news')->find();
 
         return json_encode($data);
     }
