@@ -45,6 +45,7 @@ class Cons
         $model2Content = [];
         foreach ($model2 as $k => $v) {
             $model2Content[$v['cat_id']]['title'] = $v['title'];
+            $v['image'] = explode('|',$v['image']);
             $model2Content[$v['cat_id']]['data'][] = $v;
         }
         $data['model2'] = [
