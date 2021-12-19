@@ -74,6 +74,8 @@ class Cons
             'data' => (new SiteConsContent5())->field('image')->order('sort')->select(),
         ];
 
+
+
         return json_encode($data);
     }
 }
