@@ -40,12 +40,12 @@ class Cons
         //模块2
         $model2 = (new SiteConsServiceContent())
             ->alias('data')
-            ->field('data.title,data.text,data.cat_id,image,cate.title')
+            ->field('data.title,data.text,data.cat_id,image,cate.title as cate_title')
             ->leftJoin('ea_site_cons_service_title cate', 'data.cat_id = cate.id')
             ->order('cate.sort')->select();
         $model2Content = [];
         foreach ($model2 as $k => $v) {
-            $model2Content[$v['cat_id']]['title'] = $v['title'];
+            $model2Content[$v['cat_id']]['title'] = $v['cate_title'];
             $v['image'] = explode('|',$v['image']);
             $model2Content[$v['cat_id']]['data'][] = $v;
         }
