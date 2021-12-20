@@ -8,9 +8,9 @@ use EasyAdmin\annotation\NodeAnotation;
 use think\App;
 
 /**
- * @ControllerAnnotation(title="site_innojoy_content1_title")
+ * @ControllerAnnotation(title="site_innojoy_content4")
  */
-class InnojoyContent1Title extends AdminController
+class InnojoyContent4 extends AdminController
 {
 
     use \app\admin\traits\Curd;
@@ -19,7 +19,7 @@ class InnojoyContent1Title extends AdminController
     {
         parent::__construct($app);
 
-        $this->model = new \app\admin\model\SiteInnojoyContent1Title();
+        $this->model = new \app\admin\model\SiteInnojoyContent4();
         
     }
 
@@ -43,8 +43,11 @@ class InnojoyContent1Title extends AdminController
         try {
             $update = [
                 'title'=>$post['title'],
-                'title_s'=>$post['title_s'] ?? '',
-                'form_link'=>$post['form_link'] ?? '',
+                'text'=>$post['text'] ?? '',
+                'button1'=>$post['button1'] ?? '',
+                'button1_link'=>$post['button1_link'] ?? '',
+                'button2'=>$post['button2'] ?? '',
+                'button2_link'=>$post['button2_link'] ?? '',
             ];
             $this->model->where('id',1)->update($update);
         } catch (\Exception $e) {

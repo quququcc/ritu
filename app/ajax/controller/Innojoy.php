@@ -11,11 +11,13 @@ namespace app\ajax\controller;
 
 use app\admin\model\SiteBannerInside;
 use app\admin\model\SiteConfigBottom1;
+use app\admin\model\SiteInnojetContent4;
 use app\admin\model\SiteInnojoyContent1;
 use app\admin\model\SiteInnojoyContent1Title;
 use app\admin\model\SiteInnojoyContent2;
 use app\admin\model\SiteInnojoyContent3;
 use app\admin\model\SiteInnojoyContent3Title;
+use app\admin\model\SiteInnojoyContent4;
 use app\admin\model\SiteInnojoyContent5;
 use app\admin\model\SiteInnojoyContent5Title;
 
@@ -66,6 +68,7 @@ class Innojoy
         ];
 
         //模块4 使用静态
+        $data['model4'] = (new SiteInnojoyContent4())->where('id',1)->find();
 
         //模块5
         $data['model5'] = [

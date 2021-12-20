@@ -52,6 +52,10 @@ class InnojoyContent2 extends AdminController
                 'text' => $post['text'],
                 'content' => $post['content'] ?? '',
                 'image' => $id == 1 ? $post['image'] : $post['image' . $id],
+                'button1' => $post['button1'] ?? '',
+                'button1_link' => $post['button1_link'] ?? '',
+                'button2' => $post['button2'] ?? '',
+                'button2_link' => $post['button2_link'] ?? '',
             ];
             $this->model->where('id', $id)->update($update);
         } catch (\Exception $e) {
