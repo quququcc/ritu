@@ -1,0 +1,50 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">页面其他配置</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form id="app-form" class="layui-form layuimini-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">LOGO1</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="logo1" class="layui-input layui-col-xs6"  value="{$data.logo1|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="logo1" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_logo1" data-upload-select="logo1" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label required">LOGO2</label>
+                            <div class="layui-input-block layuimini-upload">
+                                <input name="logo2" class="layui-input layui-col-xs6" value="{$data.logo2|default=''}">
+                                <div class="layuimini-upload-btn">
+                                    <span><a class="layui-btn" data-upload="logo2" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
+                                    <span><a class="layui-btn layui-btn-normal" id="select_logo2" data-upload-select="logo2" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">底部联系方式</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="phone" class="layui-input"  value="{$data.phone|default=''}">
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.configMix/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

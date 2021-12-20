@@ -49,4 +49,5 @@ Route::get('caseDetail', 'CaseController/detail');
 
 //友情链接
 Route::get('config/link', 'Config/link');
+Route::get('config/mix', 'Config/config');
 
