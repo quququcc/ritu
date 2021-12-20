@@ -28,10 +28,7 @@ class Index
     public function index()
     {
         //banner数据
-        $data['banner'] = (new SiteBanner())->where('is_show', 1)->order('sort')->where('id', 1)->find();
-        unset($data['banner']['id']);
-        unset($data['banner']['is_show']);
-        unset($data['banner']['sort']);
+        $data['banner'] = (new SiteBanner())->where('is_show', 1)->order('sort')->select();
 
         //模块1
         $data['model1'] = [
