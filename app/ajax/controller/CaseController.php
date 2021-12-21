@@ -39,33 +39,41 @@ class CaseController
         $sql = "select id,company_name_s,company_image from ea_site_case_detail";
 
         if (!empty($products)) {
-            $sql .= " where (";
-            foreach (explode(',', $products) as $k => $v) {
-                if ($k == 0) {
-                    $sql .= "products like '%" . $v . "%'";
-                } else {
-                    $sql .= " or products like '%" . $v . "%'";
-                }
-            }
-            $sql .= ")";
+//            $sql .= " where (";
+//            foreach (explode(',', $products) as $k => $v) {
+//                if ($k == 0) {
+//                    $sql .= "products like '%," . $v . ",%'";
+//                } else {
+//                    $sql .= " or products like '%," . $v . ",%'";
+//                }
+//            }
+//            $sql .= ")";
+            $sql .= " where (products like '%," . $products . ",%' or products like '%," . $products . "')";
         }
 
         if (!empty($cates)) {
+//            if (!empty($products)) {
+//                $sql .= " AND (";
+//            } else {
+//                $sql .= " where (";
+//            }
+//            foreach (explode(',', $cates) as $k => $v) {
+//                if ($k == 0) {
+//                    $sql .= "cates like '%" . $v . "%'";
+//                } else {
+//                    $sql .= " or cates like '%" . $v . "%'";
+//                }
+//            }
+//            $sql .= ")";
+
             if (!empty($products)) {
-                $sql .= " AND (";
+                $sql .= " AND ";
             } else {
-                $sql .= " where (";
+                $sql .= " where ";
             }
-            foreach (explode(',', $cates) as $k => $v) {
-                if ($k == 0) {
-                    $sql .= "cates like '%" . $v . "%'";
-                } else {
-                    $sql .= " or cates like '%" . $v . "%'";
-                }
-            }
-            $sql .= ")";
+            $sql .= "(cates like '%," . $cates . ",%' or cates like '%," . $cates . "')";
         }
-        $sql .= " limit " . ($page - 1) * $limit . "," . $limit;
+        $sql .= " order by sort asc,id desc limit " . ($page - 1) * $limit . "," . $limit;
         $data = $this->caseModel->query($sql);
         return json_encode($data);
     }

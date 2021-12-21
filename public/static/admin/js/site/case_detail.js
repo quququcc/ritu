@@ -21,7 +21,7 @@ define(["jquery", "easy-admin"], function ($, ea) {
                     {field: 'company_name', title: '公司全称'},
                     {field: 'company_image', title: '公司LOGO', templet: ea.table.image},
                     {field: 'title', title: '案例标题'},
-                    {field: 'view_num', title: '浏览量'},
+                    {field: 'sort', title: '排序',edit: 'text'},
                     {field: 'publish_time', title: '发布时间'},
                     {width: 250, title: '操作', templet: ea.table.tool},
                 ]],

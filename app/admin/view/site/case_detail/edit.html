@@ -24,6 +24,12 @@
             </div>
         </div>
         <div class="layui-form-item">
+            <label class="layui-form-label">排序</label>
+            <div class="layui-input-block">
+                <input type="text" name="sort" class="layui-input" lay-verify="number" autocomplete="off" placeholder="请输入所处行业" value="{$row.sort|default=''}">
+            </div>
+        </div>
+        <div class="layui-form-item">
             <label class="layui-form-label">所处行业</label>
             <div class="layui-input-block">
                 <input type="text" name="industry" class="layui-input" placeholder="请输入所处行业" value="{$row.industry|default=''}">
