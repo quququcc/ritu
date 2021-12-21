@@ -54,7 +54,7 @@ class CaseController
             if (!empty($products)) {
                 $sql .= " AND (";
             } else {
-                $sql .= "where (";
+                $sql .= " where (";
             }
             foreach (explode(',', $cates) as $k => $v) {
                 if ($k == 0) {
