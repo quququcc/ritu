@@ -37,6 +37,7 @@ class CaseController
         $limit = $request->param('limit', 40);
 
         $sql = "select id,company_name_s,company_image from ea_site_case_detail";
+        $count_sql = "select count(*) as num from ea_site_case_detail";
 
         if (!empty($products)) {
 //            $sql .= " where (";
@@ -49,6 +50,7 @@ class CaseController
 //            }
 //            $sql .= ")";
             $sql .= " where (products like '%," . $products . ",%' or products like '%," . $products . "')";
+            $count_sql .= " where (products like '%," . $products . ",%' or products like '%," . $products . "')";
         }
 
         if (!empty($cates)) {
@@ -68,14 +70,23 @@ class CaseController
 
             if (!empty($products)) {
                 $sql .= " AND ";
+                $count_sql .= " AND ";
             } else {
                 $sql .= " where ";
+                $count_sql .= " where ";
             }
-            $sql .= "(cates like '%," . $cates . ",%' or cates like '%," . $cates . "')";
+            $sql .= " (cates like '%," . $cates . ",%' or cates like '%," . $cates . "')";
+            $count_sql .= " (cates like '%," . $cates . ",%' or cates like '%," . $cates . "')";
         }
         $sql .= " order by sort asc,id desc limit " . ($page - 1) * $limit . "," . $limit;
         $data = $this->caseModel->query($sql);
-        return json_encode($data);
+        $count = $this->caseModel->query($count_sql)[0]['num'] ?? 0;
+        return json_encode([
+            'list' => $data,
+            'page' => (int)$page,
+            'limit' => $limit,
+            'page_num' => ceil($count / $limit),
+        ]);
     }
 
     public function index()
