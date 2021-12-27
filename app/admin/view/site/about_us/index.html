@@ -12,7 +12,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">关于我们</label>
                             <div class="layui-input-block">
-                                <textarea type="text" rows="10" name="text" class="layui-textarea" lay-verify="required">{$data.text|default=''}</textarea>
+                                <textarea type="text" rows="10" name="text" class="layui-textarea editor" lay-verify="required">{$data.text|raw|default=''}</textarea>
                             </div>
                         </div>
                         <div class="layui-form-item">
