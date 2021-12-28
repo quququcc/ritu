@@ -1,0 +1,353 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">首页</li>
+                <li>全球专利数据库</li>
+                <li>innojet专利管理</li>
+                <li>innojet商标管理</li>
+                <li>咨询服务</li>
+                <li>客户案例</li>
+                <li>关于我们</li>
+                <li>行业干货</li>
+                <li>榜单</li>
+                <li>为知塾学院</li>
+                <li>公司动态</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form id="app-form" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="index">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.index.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.index.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.index.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form2" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="innojoy">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.innojoy.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.innojoy.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.innojoy.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form3" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="innojet_patent">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.innojet_patent.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.innojet_patent.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.innojet_patent.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form4" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="innojet_brand">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.innojet_brand.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.innojet_brand.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.innojet_brand.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form5" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="consult">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.consult.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.consult.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.consult.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form7" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="case">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.case.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.case.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.case.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form6" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="about">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.about.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.about.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.about.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form8" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="book">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.book.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.book.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.book.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form9" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="top">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.top.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.top.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.top.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form10" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="course">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.course.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.course.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.course.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="layui-tab-item">
+                    <form id="app-form11" class="layui-form layuimini-form">
+                        <input type="text" name="sign" class="layui-input layui-hide" value="news">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">标题</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" class="layui-input" value="{$data.news.title|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">关键词</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="keywords" class="layui-input" value="{$data.news.keywords|default=''}">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">描述</label>
+                            <div class="layui-input-block">
+                                <textarea type="text" name="description" class="layui-textarea">{$data.news.description|default=''}</textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.seo/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -22,11 +22,15 @@ use app\admin\model\SiteResBook;
 use app\admin\model\SiteResCourse;
 use app\admin\model\SiteResNews;
 use app\admin\model\SiteResTop;
+use app\admin\model\SiteSeo;
 
 class Index
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'index')->find();
+
         //banner数据
         $data['banner'] = (new SiteBanner())->where('is_show', 1)->order('sort')->select();
 

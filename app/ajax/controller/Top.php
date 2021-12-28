@@ -13,15 +13,19 @@ use app\admin\model\SiteBannerInside;
 use app\admin\model\SiteConfigBottom1;
 use app\admin\model\SiteResNews;
 use app\admin\model\SiteResTop;
+use app\admin\model\SiteSeo;
 use app\Request;
 
 class Top
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'top')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())
-            ->field('title,title_color,title_s1,title_s1_color,background')
+            ->field('title,title_color,title_s1,title_s1_color,background,button1,button1_link,button2,button2_link')
             ->where('id', 8)->find();
 
         //猜你想看(公司动态)

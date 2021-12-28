@@ -27,14 +27,18 @@ use app\admin\model\SiteInnojetContent7;
 use app\admin\model\SiteInnojetContent7Title;
 use app\admin\model\SiteInnojetContent8;
 use app\admin\model\SiteInnojetContent8Title;
+use app\admin\model\SiteSeo;
 
 class Innojet
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'innojet_patent')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())
-            ->field('title,title_color,title_s1,title_s1_color,background')
+            ->field('title,title_color,title_s1,title_s1_color,background,button1,button1_link,button2,button2_link')
             ->where('id', 2)->find();
 
         //模块1

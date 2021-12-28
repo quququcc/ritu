@@ -21,14 +21,18 @@ use app\admin\model\SiteKnowUsService;
 use app\admin\model\SiteKnowUsServiceTitle;
 use app\admin\model\SiteProfService;
 use app\admin\model\SiteProfServiceTitle;
+use app\admin\model\SiteSeo;
 
 class Cons
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'consult')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())
-            ->field('title,title_color,title_s1,title_s1_color,background')
+            ->field('title,title_color,title_s1,title_s1_color,background,button1,button1_link,button2,button2_link')
             ->where('id', 4)->find();
 
         //模块1

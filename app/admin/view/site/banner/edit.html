@@ -25,12 +25,12 @@
                 <input type="text" name="title_s_color" class="layui-input"  placeholder="例：#636363" value="{$row.title_s_color|default=''}">
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">跳转链接</label>
-            <div class="layui-input-block">
-                <input type="text" name="to_url" class="layui-input"  placeholder="请输入跳转链接" value="{$row.to_url|default=''}">
-            </div>
-        </div>
+        <!--<div class="layui-form-item">-->
+            <!--<label class="layui-form-label">跳转链接</label>-->
+            <!--<div class="layui-input-block">-->
+                <!--<input type="text" name="to_url" class="layui-input"  placeholder="请输入跳转链接" value="{$row.to_url|default=''}">-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="layui-form-item">
             <label class="layui-form-label required">Banner图</label>
             <div class="layui-input-block layuimini-upload">
@@ -39,6 +39,30 @@
                     <span><a class="layui-btn" data-upload="background" data-upload-number="one" data-upload-exts="png|jpg|ico|jpeg" data-upload-icon="image"><i class="fa fa-upload"></i> 上传</a></span>
                     <span><a class="layui-btn layui-btn-normal" id="select_background" data-upload-select="background" data-upload-number="one" data-upload-mimetype="image/*"><i class="fa fa-list"></i> 选择</a></span>
                 </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">按钮1</label>
+            <div class="layui-input-block">
+                <input type="text" name="button1" class="layui-input" value="{$row.button1|default=''}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">按钮1链接</label>
+            <div class="layui-input-block">
+                <input type="text" name="button1_link" class="layui-input" value="{$row.button1_link|default=''}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">按钮2</label>
+            <div class="layui-input-block">
+                <input type="text" name="button2" class="layui-input" value="{$row.button2|default=''}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">按钮2链接</label>
+            <div class="layui-input-block">
+                <input type="text" name="button2_link" class="layui-input" value="{$row.button2_link|default=''}">
             </div>
         </div>
         <div class="layui-form-item">

@@ -15,15 +15,19 @@ use app\admin\model\SiteResCourse;
 use app\admin\model\SiteResCourseCate;
 use app\admin\model\SiteResCourseLecturer;
 use app\admin\model\SiteResNews;
+use app\admin\model\SiteSeo;
 use app\Request;
 
 class Course
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'course')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())
-            ->field('title,title_color,title_s1,title_s1_color,background')
+            ->field('title,title_color,title_s1,title_s1_color,background,button1,button1_link,button2,button2_link')
             ->where('id', 9)->find();
 
 

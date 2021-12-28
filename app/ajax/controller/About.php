@@ -17,14 +17,18 @@ use app\admin\model\SiteAboutTeam;
 use app\admin\model\SiteAboutUs;
 use app\admin\model\SiteBannerInside;
 use app\admin\model\SiteConfigBottom1;
+use app\admin\model\SiteSeo;
 
 class About
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'about')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())
-            ->field('title,title_color,title_s1,title_s1_color,title_s2,title_s2_color,background')
+            ->field('title,title_color,title_s1,title_s1_color,title_s2,title_s2_color,background,button1,button1_link,button2,button2_link')
             ->where('id', 7)->find();
 
         //关于大为

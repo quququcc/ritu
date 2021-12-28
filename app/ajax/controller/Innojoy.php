@@ -20,11 +20,15 @@ use app\admin\model\SiteInnojoyContent3Title;
 use app\admin\model\SiteInnojoyContent4;
 use app\admin\model\SiteInnojoyContent5;
 use app\admin\model\SiteInnojoyContent5Title;
+use app\admin\model\SiteSeo;
 
 class Innojoy
 {
     public function index()
     {
+        //head数据
+        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'innojoy')->find();
+
         //banner数据
         $data['banner'] = (new SiteBannerInside())->where('id', 1)->find();
         unset($data['banner']['id']);
