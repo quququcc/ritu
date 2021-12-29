@@ -93,7 +93,7 @@ class CaseController
     public function index()
     {
         //head数据
-        $data['head'] = (new SiteSeo())->withoutField('id')->where('sign', 'case')->find();
+        $head = (new SiteSeo())->withoutField('id')->where('sign', 'case')->find();
 
         //banner数据
         $banner = (new SiteBannerInside())
@@ -112,6 +112,7 @@ class CaseController
         $bottom = (new SiteConfigBottom1())->where('sign','case')->find();
 
         return json_encode([
+            'head' => $head,
             'banner' => $banner,
             'products' => $products,
             'cates' => $cates,
