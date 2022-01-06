@@ -4,11 +4,11 @@
         <div class="layui-form-item">
             <label class="layui-form-label">标题</label>
             <div class="layui-input-block">
-                <input type="text" name="title" class="layui-input" lay-verify="required" placeholder="请输入标题" value="{$row.title|default=''}">
+                <input type="text" name="title" class="layui-input" placeholder="请输入标题" value="{$row.title|default=''}">
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label required">展示图</label>
+            <label class="layui-form-label">展示图</label>
             <div class="layui-input-block layuimini-upload">
                 <input name="image" class="layui-input layui-col-xs6" value="{$row.image|default=''}">
                 <div class="layuimini-upload-btn">
@@ -20,7 +20,7 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">摘要</label>
             <div class="layui-input-block">
-                <textarea name="descript" class="layui-textarea" lay-verify="required" placeholder="请输入摘要">{$row.descript|raw|default=''}</textarea>
+                <textarea name="descript" class="layui-textarea" placeholder="请输入摘要">{$row.descript|raw|default=''}</textarea>
             </div>
         </div>
         <div class="layui-form-item">
@@ -32,7 +32,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">浏览量</label>
             <div class="layui-input-block">
-                <input type="text" name="view_num" class="layui-input" lay-verify="required" placeholder="请输入浏览量" value="{$row.view_num|default=''}">
+                <input type="text" name="view_num" class="layui-input" placeholder="请输入浏览量" value="{$row.view_num|default=''}">
             </div>
         </div>
         <div class="layui-form-item">
