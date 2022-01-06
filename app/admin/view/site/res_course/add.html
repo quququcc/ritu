@@ -73,10 +73,17 @@
         <div class="layui-form-item">
             <label class="layui-form-label">视频</label>
             <div class="layui-input-block layuimini-upload">
-                <input name="video" class="layui-input layui-col-xs6" placeholder="请上传视频" value="">
+                <input name="video" id="name" class="layui-input layui-col-xs6" placeholder="请上传视频" value="">
                 <div class="layuimini-upload-btn">
-                    <span><a class="layui-btn" data-upload="video" data-upload-number="one" data-upload-exts="doc|gif|ico|icon|jpg|mp3|mp4|p12|pem|png|rar|jpeg|docx|txt|pptx|pdf|xls|lxsx" data-upload-icon="file"><i class="fa fa-upload"></i> 上传</a></span>
+                    <span><a class="layui-btn" id="videoBtn" data-upload-number="one" data-upload-exts="doc|gif|ico|icon|jpg|mp3|mp4|p12|pem|png|rar|jpeg|docx|txt|pptx|pdf|xls|lxsx" data-upload-icon="video"><i class="fa fa-upload"></i> 上传</a></span>
                     <span><a class="layui-btn layui-btn-normal" id="select_video" data-upload-select="video" data-upload-number="one" data-upload-mimetype="*"><i class="fa fa-list"></i> 选择</a></span>
+                </div>
+            </div>
+            <div class="progress form-group layui-input-block layui-hide" id="name-percent" style="margin-top: 25px">
+                <div class="col-sm-10 col-sm-offset-2" style="width: 300px;">
+                    <div class="layui-progress" lay-showPercent="yes">
+                        <div class="layui-progress-bar" id="uploadImg" lay-percent="0%"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,3 +108,7 @@
     </form>
 </div>
 <script type="text/javascript"  src="/static/admin/js/site/res_course_edit.js"></script>
+<script type="text/javascript"  src="/static/admin/js/site/wm_upload.js"></script>
+<script>
+    videoUpload("#videoBtn","#uploadImg");
+</script>
