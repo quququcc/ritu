@@ -1,0 +1,38 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">加入我们</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form id="app-form" class="layui-form layuimini-form">
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">内容</label>
+                            <div class="layui-input-block">
+                                <textarea name="text" rows="10" class="layui-textarea" lay-verify="required" placeholder="请填写公司文化内容">{$data.text|default=''}</textarea>
+                                <tip>请填写公司文化内容</tip>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">招聘岗位</label>
+                            <div class="layui-input-block">
+                                <textarea name="editor" class="layui-textarea editor" rows="15" placeholder="请填写招聘岗位">{$data.editor|raw|default=''}</textarea>
+                                <tip>请填写招聘岗位</tip>
+                            </div>
+                        </div>
+                        <div class="hr-line"></div>
+                        <div class="layui-form-item text-center">
+                            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="site.join_us/save" data-refresh="false">确认</button>
+                            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
