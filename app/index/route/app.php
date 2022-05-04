@@ -16,8 +16,7 @@ use think\facade\Route;
 //Route::get('imgs/:imgs', 'Index/imgs');
 
 //前台页面路由
-Route::get('index.html', 'Index/index');
-Route::get(':url', 'Index/index');
+Route::get('/', 'Index/index');
 
 
 

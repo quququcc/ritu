@@ -1,0 +1,223 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>走进日图</title>
+
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+  <script src="../js/jq-v2.1.1.js"></script>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <div class="menu flex">
+    <div class="content flex row-between">
+      <a class="logo" href="./index.html">
+        <img src="./../images/index/logo.png" alt="logo">
+      </a>
+      <div class="tabs flex">
+        <a class="tab" href="./index.html">首页</a>
+        <a class="tab" href="./category.html">应用与方案</a>
+        <a class="tab" href="./products.html">
+          产品中心
+          <!-- <div class="pop-menu">
+
+        </div> -->
+        </a>
+        <a class="tab" href="./news.html">新闻中心</a>
+        <a class="tab active" href="./aboutus.html">走进日图</a>
+      </div>
+    </div>
+  </div>
+  <div class="pg-aboutus">
+    <div class="ad">
+      <img src="./../images/index/banner.png" alt="">
+    </div>
+    <div class="tabs flex">
+      <div class="tab active" onclick="changeTabs(0)">公司简介</div>
+      <div class="tab" onclick="changeTabs(1)">公司文化</div>
+      <div class="tab" onclick="changeTabs(2)">资质证书</div>
+      <div class="tab" onclick="changeTabs(3)">分支机构</div>
+      <div class="tab" onclick="changeTabs(4)">加入我们</div>
+    </div>
+    <div class="pg-aboutus-box">
+
+      <div class="content content-0">
+        <div class="cn">公司简介</div>
+        <div class="en">COMPANY PROFILE</div>
+        <div class="desc flex row-between">
+          <div class="content-info">
+            公司简介
+          </div>
+          <div class="desc-box">
+            <img src="./../images/index/instance-01 (1).png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="content content-1">
+        <div class="cn">公司文化</div>
+        <div class="en">CORPORATE CULTURE</div>
+        <div class="desc flex row-between">
+          <div class="content-info">
+            公司文化
+          </div>
+          <div class="desc-box">
+            <img src="./../images/index/instance-01 (1).png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="content content-2">
+        <div class="cn">资质证书</div>
+        <div class="en">QUALIFICATION CERTIFICATE</div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+            <div class="swiper-slide flex">
+              <img class="img" src="./../images/aboutus/certif-01.png" alt="">
+            </div>
+          </div>
+          <!-- 如果需要导航按钮 -->
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="content content-3">
+        <div class="cn">分支机构</div>
+        <div class="en">BRANCH</div>
+        <div class="company flex row-start flex-wrap">
+          <div class="box">
+            <div class="title">深圳总公司</div>
+            <div class="line">地址：广东省深圳市南山区留仙大道南山云谷创新产业园二期6栋一楼东座
+            </div>
+            <div class="line">电话：0755-83680722（8线）
+            </div>
+            <div class="line">传真：0755-83680733
+            </div>
+            <div class="line">邮编：518053
+            </div>
+            <div class="line">E-mail：ritu@rituchina.com</div>
+          </div>
+          <div class="box">
+            <div class="title">深圳总公司</div>
+            <div class="line">地址：广东省深圳市南山区留仙大道南山云谷创新产业园二期6栋一楼东座
+            </div>
+            <div class="line">电话：0755-83680722（8线）
+            </div>
+            <div class="line">传真：0755-83680733
+            </div>
+            <div class="line">邮编：518053
+            </div>
+            <div class="line">E-mail：ritu@rituchina.com</div>
+          </div>
+          <div class="box">
+            <div class="title">深圳总公司</div>
+            <div class="line">地址：广东省深圳市南山区留仙大道南山云谷创新产业园二期6栋一楼东座
+            </div>
+            <div class="line">电话：0755-83680722（8线）
+            </div>
+            <div class="line">传真：0755-83680733
+            </div>
+            <div class="line">邮编：518053
+            </div>
+            <div class="line">E-mail：ritu@rituchina.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content content-4">
+        <div class="cn">加入我们</div>
+        <div class="en">JOIN US</div>
+        <div class="desc">
+          深圳市日图科技有限公司（简称“日图科技”）创始于上世纪九十年代，核心业务是为国内企业提供测试设备及相关器材的供应服务，公司客户涵盖制造、科研、教育、电力、能源、通信等众多领域。创业至今，日图科技已经成为国内仪器仪表行业中最
+          大的综合服务供应商之一。公司座落于环境优雅的深圳市云谷创新产业园；五天工作制，并提供具有竞争力的薪酬和福利；公司提供全面的培训补充自己的知识经验。日图诚邀您的加入，也希望日图公司能成为您理想的职业平台！</div>
+        <div class="title">招聘岗位</div>
+        <div class="hc">
+          一、销售工程师
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="content flex row-between col-start">
+      <div class="left">
+        <img class="logo" src="./../images/index/logo.png" alt="">
+        <div class="text">全国服务热线</div>
+        <div class="phone">400-616-5217</div>
+        <div class="date">服务时间： <br />
+          工作日 09:00 - 17:30</div>
+      </div>
+      <div class="right flex col-start">
+        <div class="box">
+          <a class="cate-01" href="./index.html">测试产品</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+        </div>
+        <div class="box">
+          <a class="cate-01" href="./index.html">测试产品0</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+          <a class="cate-02" href="./index.html">二级目录1</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script>
+
+    function changeTabs(index) {
+      $('.content-' + index).show().siblings().hide()
+    }
+
+    var mySwiper = new Swiper('.content .swiper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: true,
+      slidesPerView: 4,
+      grid: {
+        fill: 'column'
+      }
+    })
+    $('.swiper-button-prev').click(function () {
+      mySwiper.slideNext();
+    })
+    $('.swiper-button-next').click(function () {
+      mySwiper.slidePrev();
+    })
+
+    $('.tabs .tab').click(function () {
+      $(this).addClass('active').siblings().removeClass('active')
+    })
+
+  </script>
+</body>
+
+</html>

@@ -18,9 +18,18 @@ use think\facade\View;
 
 class Index extends BaseController
 {
-    public function index($url = 'index')
+    /**
+     * note：首页页面
+     * @return string
+     */
+    public function index()
     {
-        //自动加载对应的html文件
-        return View::fetch($url);
+        //查询数据
+
+        //页面数据赋值
+        View::assign('data','变量内容');
+
+        //加载对应的html文件
+        return View::fetch('..\view\index\index.html');
     }
 }
