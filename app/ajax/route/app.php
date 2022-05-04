@@ -10,44 +10,28 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-//首页
-Route::get('index', 'Index/index');
-//innojoy
-Route::get('innojoy', 'Innojoy/index');
-//innojet
-Route::get('innojet', 'Innojet/index');
-//商标
-Route::get('brand', 'Brand/index');
-//咨询
-Route::get('cons', 'Cons/index');
-//关于我们
-Route::get('about', 'About/index');
-//招聘岗位分类
-Route::get('jobList', 'Job/index');
-//白皮书
-Route::get('book', 'Book/index');
-Route::get('bookList', 'Book/list');
-//获取最新一条白皮书信息（站点顶部）
-Route::get('bookTop', 'Book/top');
+//新闻综合
+Route::get('news_synthesis', 'NewsController/newsSynthesis');
 
-//榜单
-Route::get('top', 'Top/index');
-Route::get('topList', 'Top/list');
-//动态
-Route::get('newsDetail', 'News/detail');
-Route::get('newsList', 'News/list');
-Route::get('news', 'News/index');
-//学院
-Route::get('course', 'Course/index');
-Route::get('courseList', 'Course/List');
-Route::get('courseHistory', 'Course/history');
-Route::get('courseDetail', 'Course/detail');
-//客户案例
-Route::get('caseList', 'CaseController/list');
-Route::get('case', 'CaseController/index');
-Route::get('caseDetail', 'CaseController/detail');
+//新闻详情
+Route::get('news_detail', 'NewsController/newsDetail');
 
-//友情链接
-Route::get('config/link', 'Config/link');
-Route::get('config/mix', 'Config/config');
+//加入我们板块：
+Route::get('certificate', 'AboutUsController/certificate');//资质证书
+Route::get('join_us', 'AboutUsController/joinUs');//加入我们
+Route::get('company_profile', 'AboutUsController/companyProfile');//公司简介
+Route::get('culture', 'AboutUsController/culture');//公司文化
+Route::get('mechanism', 'AboutUsController/mechanism');//分支机构
+
+//产品板块
+Route::get('product_list', 'ProductController/list'); //列表
+Route::get('list_page', 'ProductController/listPage'); //列表分页接口
+Route::get('product_detail', 'ProductController/productDetail'); //产品详情
+
+//应用与方案
+Route::get('app_list', 'AppController/list'); //一级分类列表
+Route::get('second_list', 'AppController/secondList'); //二级分类列表
+Route::get('second_list_page', 'AppController/secondListPage'); //二级分类列表分页
+Route::get('app_product_detail', 'AppController/appProductDetail'); //产品详情
+
 

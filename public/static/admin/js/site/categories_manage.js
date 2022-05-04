@@ -8,11 +8,11 @@ define(["jquery", "easy-admin", "treetable", "iconPickerFa", "autocomplete"], fu
     var init = {
         table_elem: '#currentTable',
         table_render_id: 'currentTableRenderId',
-        index_url: 'site.app_cate/index',
-        add_url: 'site.app_cate/add',
-        delete_url: 'site.app_cate/delete',
-        edit_url: 'site.app_cate/edit',
-        modify_url: 'site.app_cate/modify',
+        index_url: 'site.categories_manage/index',
+        add_url: 'site.categories_manage/add',
+        delete_url: 'site.categories_manage/delete',
+        edit_url: 'site.categories_manage/edit',
+        modify_url: 'site.categories_manage/modify',
     };
 
     var Controller = {
@@ -139,7 +139,7 @@ define(["jquery", "easy-admin", "treetable", "iconPickerFa", "autocomplete"], fu
             });
             autocomplete.render({
                 elem: $('#href')[0],
-                url: ea.url('site.app_cate/getMenuTips'),
+                url: ea.url('site.categories_manage/getMenuTips'),
                 template_val: '{{d.node}}',
                 template_txt: '{{d.node}} <span class=\'layui-badge layui-bg-gray\'>{{d.title}}</span>',
                 onselect: function (resp) {
@@ -170,7 +170,7 @@ define(["jquery", "easy-admin", "treetable", "iconPickerFa", "autocomplete"], fu
             });
             autocomplete.render({
                 elem: $('#href')[0],
-                url: ea.url('site.app_cate/getMenuTips'),
+                url: ea.url('site.categories_manage/getMenuTips'),
                 template_val: '{{d.node}}',
                 template_txt: '{{d.node}} <span class=\'layui-badge layui-bg-gray\'>{{d.title}}</span>',
                 onselect: function (resp) {

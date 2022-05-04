@@ -1,16 +1,16 @@
 <?php
 
-
-
 namespace app\admin\model;
 
 use app\common\model\TimeModel;
 
-class AppCate extends TimeModel
+class SiteCategoriesManage extends TimeModel
 {
-    protected $name = "site_app_cate";
 
-    protected $deleteTime = 'delete_time';
+    protected $name = "site_categories_manage";
+
+    protected $deleteTime = "delete_time";
+
 
     public function getPidMenuList()
     {

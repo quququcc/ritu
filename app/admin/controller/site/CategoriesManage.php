@@ -1,37 +1,26 @@
 <?php
 
-
-
 namespace app\admin\controller\site;
 
-use app\admin\model\SystemMenu;
-use app\admin\model\SystemNode;
-use app\admin\service\TriggerService;
-use app\common\constants\MenuConstant;
+use app\common\controller\AdminController;
 use EasyAdmin\annotation\ControllerAnnotation;
 use EasyAdmin\annotation\NodeAnotation;
-use app\common\controller\AdminController;
 use think\App;
 
 /**
- * Class Menu
- * @package app\admin\controller\system
- * @ControllerAnnotation(title="菜单管理",auth=true)
+ * @ControllerAnnotation(title="site_categories_manage")
  */
-class AppCate extends AdminController
+class CategoriesManage extends AdminController
 {
 
     use \app\admin\traits\Curd;
 
-    protected $sort = [
-        'sort' => 'desc',
-        'id'   => 'asc',
-    ];
-
     public function __construct(App $app)
     {
         parent::__construct($app);
-        $this->model = new \app\admin\model\AppCate();
+
+        $this->model = new \app\admin\model\SiteCategoriesManage();
+        
     }
 
     /**
@@ -74,15 +63,14 @@ class AppCate extends AdminController
                 $this->error('保存失败');
             }
             if ($save) {
-                TriggerService::updateMenu();
                 $this->success('保存成功');
             } else {
                 $this->error('保存失败');
             }
         }
         $pidMenuList = $this->model->getPidMenuList();
-        $this->assign('id', $id);
         $this->assign('pidMenuList', $pidMenuList);
+        $this->assign('id', $id);
         return $this->fetch();
     }
 
@@ -138,5 +126,35 @@ class AppCate extends AdminController
         } else {
             $this->error('删除失败');
         }
+    }
+
+    /**
+     * @NodeAnotation(title="属性修改")
+     */
+    public function modify()
+    {
+        $this->checkPostRequest();
+        $post = $this->request->post();
+        $rule = [
+            'id|ID'    => 'require',
+            'field|字段' => 'require',
+            'value|值'  => 'require',
+        ];
+        $this->validate($post, $rule);
+        $row = $this->model->find($post['id']);
+        if (!$row) {
+            $this->error('数据不存在');
+        }
+        if (!in_array($post['field'], $this->allowModifyFields)) {
+            $this->error('该字段不允许修改：' . $post['field']);
+        }
+        try {
+            $row->save([
+                $post['field'] => $post['value'],
+            ]);
+        } catch (\Exception $e) {
+            $this->error($e->getMessage());
+        }
+        $this->success('保存成功');
     }
 }

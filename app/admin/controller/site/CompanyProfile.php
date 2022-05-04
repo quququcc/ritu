@@ -8,9 +8,9 @@ use EasyAdmin\annotation\NodeAnotation;
 use think\App;
 
 /**
- * @ControllerAnnotation(title="site_culture")
+ * @ControllerAnnotation(title="site_company_profile")
  */
-class Culture extends AdminController
+class CompanyProfile extends AdminController
 {
 
     use \app\admin\traits\Curd;
@@ -19,10 +19,9 @@ class Culture extends AdminController
     {
         parent::__construct($app);
 
-        $this->model = new \app\admin\model\SiteCulture();
+        $this->model = new \app\admin\model\SiteCompanyProfile();
         
     }
-
 
     /**
      * @NodeAnotation(title="列表")
